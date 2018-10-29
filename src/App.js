@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Footer, Nav } from 'components';
+import TypeWriter from 'react-typewriter';
 import { optionsFirst, optionsSecond, optionsThird } from 'constants/index';
 import Select from 'react-select';
 import classnames from 'classnames';
@@ -142,14 +143,14 @@ class App extends Component {
                 <h2 className="board__title  dark-white">Usage</h2>
 
                 <div className="board board--1">
-                  <p>{usage}</p>
+                  <TypeWriter typing={1}>{usage}</TypeWriter>
                 </div>
 
                 {output.length ? (
                   <React.Fragment>
                     <h2 className="board__title  dark-white">Output</h2>
                     <div className="board board--2">
-                      <p>{output}</p>
+                      <TypeWriter typing={1}>{output}</TypeWriter>
                     </div>
                   </React.Fragment>
                 ) : null}
