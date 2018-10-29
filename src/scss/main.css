@@ -332,12 +332,220 @@ body {
   font-family: "OpenSans", sans-serif;
   font-size: 1.6rem; }
 
-.card-stats .card-body {
-  padding: 2rem; }
+.home {
+  background: #eef0f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 3rem 5rem;
+  transition: background 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+  @media (max-width: 575px) {
+    .home {
+      padding: 3rem; } }
+  .home.dark {
+    background: #20252d; }
+    .home.dark .dark-white {
+      color: #fff; }
+    .home.dark .board {
+      background: rgba(255, 255, 255, 0.2) !important; }
+  .home .row {
+    display: flex;
+    flex-direction: row; }
+    @media (max-width: 991px) {
+      .home .row {
+        flex-direction: column; } }
+    .home .row .col {
+      flex: 1;
+      padding: 0 2rem; }
+      @media (max-width: 991px) {
+        .home .row .col {
+          padding: 0; } }
+  .home .content {
+    flex: 1;
+    padding-top: 5rem; }
+    .home .content__title {
+      color: #20252d;
+      letter-spacing: 1px; }
+      .home .content__title span {
+        color: #00bfaa; }
+    .home .content__subtitle {
+      color: #4a4a4a;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      margin: 0;
+      transition: 0.1s color;
+      width: 30rem; }
+      @media (max-width: 575px) {
+        .home .content__subtitle {
+          width: 100%; } }
+    .home .content .options {
+      margin: 5rem 0; }
+      .home .content .options__title {
+        color: #4a4a4a;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        margin: 0;
+        transition: 0.1s color;
+        color: #00bfaa;
+        font-weight: bold;
+        margin-bottom: 2rem; }
+      .home .content .options__select {
+        width: 30rem;
+        margin-bottom: 2rem; }
+        @media (max-width: 575px) {
+          .home .content .options__select {
+            width: 100%; } }
+        .home .content .options__select__control {
+          height: 5rem;
+          border: none;
+          box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1); }
+        .home .content .options__select__indicator-separator {
+          display: none; }
+        .home .content .options__select__single-value {
+          color: #4a4a4a;
+          font-size: 1.4rem;
+          letter-spacing: 1px;
+          margin: 0;
+          transition: 0.1s color;
+          font-weight: bold; }
+        .home .content .options__select__menu {
+          margin: 0;
+          padding: 0 !important; }
+          .home .content .options__select__menu-list {
+            padding: 0 !important; }
+    .home .content .board {
+      background: #20252d;
+      border-radius: 1rem;
+      border-left: 1rem solid #00bfaa;
+      min-height: 40rem;
+      padding: 3rem;
+      transition: 0.3s background cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+      @media (max-width: 575px) {
+        .home .content .board {
+          padding: 2rem; } }
+      .home .content .board p {
+        color: #fff;
+        letter-spacing: 1px;
+        font-weight: 600; }
 
-.card-stats .card-title {
+.toggle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+  .toggle__option {
+    color: #4a4a4a;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    margin: 0;
+    transition: 0.1s color;
+    transition: all 0.3s; }
+    .toggle__option--left {
+      margin-right: 1.5rem; }
+    .toggle__option--right {
+      margin-left: 1.5rem; }
+
+.toggler {
+  display: inline-block;
+  margin: 7px;
+  margin: 2.5px;
+  width: 35px;
+  height: 10px;
   text-align: center;
-  font-size: 2rem; }
+  position: relative; }
+  .toggler input[type="checkbox"] {
+    display: none; }
+    .toggler input[type="checkbox"]:checked ~ .button {
+      background: #fff;
+      left: 23px;
+      transition: 0.5s; }
+    .toggler input[type="checkbox"]:checked ~ .switch {
+      background: #00baa5;
+      transition: 0.5s; }
+  .toggler .switch {
+    display: block;
+    width: 35px;
+    height: 10px;
+    background: #00bfaa;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    cursor: pointer; }
+  .toggler .button {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    box-shadow: 0 0.7px 1.4px rgba(0, 0, 0, 0.4);
+    transition: 0.5s;
+    cursor: pointer; }
 
-.navbar {
-  margin-bottom: 0; }
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+  @media (max-width: 575px) {
+    .nav {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end; } }
+  .nav .language {
+    display: flex;
+    align-items: center;
+    margin-right: 4rem; }
+    @media (max-width: 575px) {
+      .nav .language {
+        margin-right: 0;
+        margin-bottom: 2rem; } }
+    .nav .language__title {
+      color: #4a4a4a;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      margin: 0;
+      transition: 0.1s color; }
+    .nav .language__select {
+      width: 15rem;
+      margin-left: 3rem; }
+      .nav .language__select__control {
+        border: none;
+        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1); }
+      .nav .language__select__indicator-separator {
+        display: none; }
+      .nav .language__select__single-value {
+        color: #4a4a4a;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        margin: 0;
+        transition: 0.1s color; }
+      .nav .language__select__menu {
+        margin: 0;
+        padding: 0 !important; }
+        .nav .language__select__menu-list {
+          padding: 0 !important; }
+
+.footer {
+  margin-top: 5rem; }
+  .footer__copyright {
+    display: block;
+    color: #4a4a4a;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    margin: 0;
+    transition: 0.1s color;
+    text-align: center; }
+    .footer__copyright span {
+      color: crimson; }
+    .footer__copyright:hover {
+      color: initial; }
+  .footer .logo {
+    display: flex;
+    justify-content: flex-end; }
+    .footer .logo--github {
+      width: 4rem;
+      height: 4rem;
+      fill: blue; }

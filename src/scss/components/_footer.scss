@@ -1,2 +1,26 @@
 .footer {
+  margin-top: 5rem;
+  &__copyright {
+    display: block;
+    @include text();
+    text-align: center;
+
+    span {
+      color: crimson;
+    }
+
+    &:hover {
+      color: initial;
+    }
+  }
+
+  .logo {
+    display: flex;
+    justify-content: flex-end;
+    &--github {
+      width: 4rem;
+      height: 4rem;
+      fill: blue;
+    }
+  }
 }

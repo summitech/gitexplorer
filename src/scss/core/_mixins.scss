@@ -50,3 +50,11 @@
     }
   }
 }
+
+@mixin text {
+  color: $color-text;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  margin: 0;
+  transition: 0.1s color;
+}
