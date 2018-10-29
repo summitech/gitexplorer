@@ -1,14 +1,17 @@
 .home {
   background: $color-grey;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
-  padding: 3rem 5rem;
   transition: background 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
   @include respond("xs") {
     padding: 3rem;
+  }
+
+  &__container {
+    display: flex;
+    padding: 3rem 5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
   }
 
   &.dark {
@@ -20,6 +23,20 @@
 
     .board {
       background: rgba($color-white, 0.2) !important;
+    }
+  }
+
+  .container {
+    display: flex;
+    width: 100%;
+    @include respond("lg") {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    @include respond("xl") {
+      max-width: 1200px;
+      margin: 0 auto;
     }
   }
 

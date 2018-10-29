@@ -28,48 +28,50 @@ class App extends Component {
   render() {
     return (
       <div className={`home ${classnames({ dark: this.state.dark })}`}>
-        <Nav mode={this.state.dark} toggleMode={this.toggleMode} />
-        <div className="content">
-          <div className="row">
-            <div className="col">
-              <h2 className="content__title  dark-white">
-                Git <span>Command</span> Explorer
-              </h2>
-              <p className="content__subtitle">
-                Find the right commands you need without digging through the web
-              </p>
+        <div className="container home__container">
+          <Nav mode={this.state.dark} toggleMode={this.toggleMode} />
+          <div className="content">
+            <div className="row">
+              <div className="col">
+                <h2 className="content__title  dark-white">
+                  Git <span>Command</span> Explorer
+                </h2>
+                <p className="content__subtitle">
+                  Find the right commands you need without digging through the web
+                </p>
 
-              <div className="options">
-                <h4 className="options__title">I want to:</h4>
+                <div className="options">
+                  <h4 className="options__title">I want to:</h4>
 
-                <Select
-                  placeholder="..."
-                  className="options__select"
-                  classNamePrefix="options__select"
-                  isSearchable={false}
-                  // value={selectedOption}
-                  options={optionsFirst}
-                />
+                  <Select
+                    placeholder="..."
+                    className="options__select"
+                    classNamePrefix="options__select"
+                    isSearchable={false}
+                    // value={selectedOption}
+                    options={optionsFirst}
+                  />
 
-                <Select
-                  placeholder="..."
-                  className="options__select"
-                  classNamePrefix="options__select"
-                  isSearchable={false}
-                  // value={selectedOption}
-                  options={optionsSecond}
-                />
+                  <Select
+                    placeholder="..."
+                    className="options__select"
+                    classNamePrefix="options__select"
+                    isSearchable={false}
+                    // value={selectedOption}
+                    options={optionsSecond}
+                  />
+                </div>
               </div>
-            </div>
-            <div className="col">
-              <div className="board">
-                <p>git config --global user.name "Sam Smith"</p>
-                <p>git config --global user.name "Sam Smith"</p>
+              <div className="col">
+                <div className="board">
+                  <p>git config --global user.name "Sam Smith"</p>
+                  <p>git config --global user.name "Sam Smith"</p>
+                </div>
               </div>
             </div>
           </div>
+          <Footer dark={this.state.dark} />
         </div>
-        <Footer dark={this.state.dark} />
       </div>
     );
   }
