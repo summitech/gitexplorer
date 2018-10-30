@@ -38,6 +38,7 @@
     "consistent-return": "off",
     "react/jsx-filename-extension": "off",
     "guard-for-in": "off",
-    "import/no-unresolved": "off"
+    "import/no-unresolved": "off",
+    "no-return-assign": "off"
   }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Footer, Nav } from 'components';
-import TypeWriter from 'react-typewriter';
+import Typist from 'react-typist';
 import { optionsFirst, optionsSecond, optionsThird } from 'constants/index';
 import Select from 'react-select';
 import classnames from 'classnames';
@@ -51,12 +51,14 @@ class App extends Component {
 
   onSecondChange = (selectedOption) => {
     if (selectedOption.output) {
-      this.setState({
-        secondOption: selectedOption,
-        showThird: false,
-        output: selectedOption.output,
-        usage: selectedOption.usage,
-        thirdOption: null
+      this.setState({ output: '', usage: '' }, () => {
+        this.setState({
+          secondOption: selectedOption,
+          showThird: false,
+          output: selectedOption.output,
+          usage: selectedOption.usage,
+          thirdOption: null
+        });
       });
     } else {
       this.setState({
@@ -70,10 +72,12 @@ class App extends Component {
   };
 
   onThirdChange = (selectedOption) => {
-    this.setState({
-      thirdOption: selectedOption,
-      output: selectedOption.output,
-      usage: selectedOption.usage
+    this.setState({ output: '', usage: '' }, () => {
+      this.setState({
+        thirdOption: selectedOption,
+        output: selectedOption.output,
+        usage: selectedOption.usage
+      });
     });
   };
 
@@ -143,14 +147,27 @@ class App extends Component {
                 <h2 className="board__title  dark-white">Usage</h2>
 
                 <div className="board board--1">
-                  <TypeWriter typing={1}>{usage}</TypeWriter>
+                  <p className="faded">git config --global user.name "Sam Smith"</p>
+                  <p className="faded">git config --global user.name "Sam Smith"</p>
+
+                  <pre>
+                    {usage.length ? (
+                      <Typist avgTypingDelay={50} cursor={{ show: false }}>
+                        {usage}
+                      </Typist>
+                    ) : null}
+                  </pre>
                 </div>
 
                 {output.length ? (
                   <React.Fragment>
                     <h2 className="board__title  dark-white">Output</h2>
                     <div className="board board--2">
-                      <TypeWriter typing={1}>{output}</TypeWriter>
+                      <pre>
+                        <Typist avgTypingDelay={50} cursor={{ show: false }}>
+                          {output}
+                        </Typist>
+                      </pre>
                     </div>
                   </React.Fragment>
                 ) : null}

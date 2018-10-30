@@ -11,7 +11,7 @@
     "react-dom": "^16.6.0",
     "react-scripts": "2.0.5",
     "react-select": "^2.1.1",
-    "react-typewriter": "^0.4.1"
+    "react-typist": "^2.0.4"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",

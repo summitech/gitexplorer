@@ -447,15 +447,16 @@ body {
       border-left: 1rem solid #00bfaa;
       padding: 3rem;
       transition: 0.3s background cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+      .home .content .board .faded {
+        opacity: 0.5; }
+      .home .content .board pre {
+        margin: 0; }
       .home .content .board__title {
         color: #20252d;
         letter-spacing: 1px;
         margin-bottom: 1rem; }
       .home .content .board--1 {
-        min-height: 20rem;
         margin-bottom: 5rem; }
-      .home .content .board--2 {
-        min-height: 40rem; }
       @media (max-width: 575px) {
         .home .content .board {
           padding: 2rem; } }

@@ -16,7 +16,7 @@ class Nav extends React.Component {
     const { selectedOption } = this.state;
     return (
       <nav className="nav">
-        <div className="language">
+        {/* <div className="language">
           <p className="language__title dark-white">Language</p>
           <Select
             className="language__select"
@@ -25,7 +25,7 @@ class Nav extends React.Component {
             value={selectedOption}
             options={options}
           />
-        </div>
+        </div> */}
 
         <div className="toggle">
           <p className="toggle__option toggle__option--left  dark-white">Light Mode</p>

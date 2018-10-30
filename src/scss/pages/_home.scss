@@ -151,6 +151,14 @@
       padding: 3rem;
       transition: 0.3s background cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
+      .faded {
+        opacity: 0.5;
+      }
+
+      pre {
+        margin: 0;
+      }
+
       &__title {
         color: $color-dark;
         letter-spacing: 1px;
@@ -158,12 +166,12 @@
       }
 
       &--1 {
-        min-height: 20rem;
+        // min-height: 20rem;
         margin-bottom: 5rem;
       }
 
       &--2 {
-        min-height: 40rem;
+        // min-height: 40rem;
       }
 
       @include respond("xs") {
