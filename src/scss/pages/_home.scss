@@ -111,10 +111,10 @@
       }
 
       &__select {
-        width: 30rem;
+        width: 80%;
         margin-bottom: 2rem;
 
-        @include respond("xs") {
+        @include respond("am") {
           width: 100%;
         }
 
