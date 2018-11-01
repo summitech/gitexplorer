@@ -418,9 +418,9 @@ body {
         font-weight: bold;
         margin-bottom: 2rem; }
       .home .content .options__select {
-        width: 30rem;
+        width: 80%;
         margin-bottom: 2rem; }
-        @media (max-width: 575px) {
+        @media (max-width: 991px) {
           .home .content .options__select {
             width: 100%; } }
         .home .content .options__select__control {

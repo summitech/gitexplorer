@@ -112,7 +112,7 @@ class App extends Component {
                     placeholder="..."
                     className="options__select"
                     classNamePrefix="options__select"
-                    isSearchable={false}
+                    isSearchable={true}
                     onChange={this.onFirstChange}
                     value={firstOption}
                     options={optionsFirst}
@@ -123,7 +123,7 @@ class App extends Component {
                       placeholder="..."
                       className="options__select"
                       classNamePrefix="options__select"
-                      isSearchable={false}
+                      isSearchable={true}
                       onChange={this.onSecondChange}
                       value={secondOption}
                       options={optionsSecond[firstOption.value]}
@@ -135,7 +135,7 @@ class App extends Component {
                       placeholder="..."
                       className="options__select"
                       classNamePrefix="options__select"
-                      isSearchable={false}
+                      isSearchable={true}
                       onChange={this.onThirdChange}
                       value={thirdOption}
                       options={optionsThird[secondOption.value]}
