@@ -1,8 +1,5 @@
 import React from 'react';
-import Select from 'react-select';
 import PropTypes from 'prop-types';
-
-const options = [{ value: 'English', label: 'English' }];
 
 class Nav extends React.Component {
   constructor(props) {
@@ -13,7 +10,6 @@ class Nav extends React.Component {
   }
 
   render() {
-    const { selectedOption } = this.state;
     return (
       <nav className="nav">
         {/* <div className="language">
