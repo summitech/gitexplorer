@@ -273,7 +273,7 @@ progress {
   font: inherit;
   -webkit-appearance: button; }
 
-output {
+nb {
   display: inline-block; }
 
 summary {
@@ -464,6 +464,9 @@ body {
         color: #fff;
         letter-spacing: 1px;
         font-weight: 600; }
+
+.Typist {
+  white-space: pre-wrap; }
 
 .toggle {
   display: flex;

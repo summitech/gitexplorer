@@ -16,7 +16,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 - [Supported Browsers](#supported-browsers)
 - [Supported Language Features](#supported-language-features)
 - [Syntax Highlighting in the Editor](#syntax-highlighting-in-the-editor)
-- [Displaying Lint Output in the Editor](#displaying-lint-output-in-the-editor)
+- [Displaying Lint nb in the Editor](#displaying-lint-nb-in-the-editor)
 - [Debugging in the Editor](#debugging-in-the-editor)
 - [Formatting Code Automatically](#formatting-code-automatically)
 - [Changing the Page `<title>`](#changing-the-page-title)
@@ -232,14 +232,14 @@ If you use any other ES6+ features that need **runtime support** (such as `Array
 
 To configure the syntax highlighting in your favorite text editor, head to the [relevant Babel documentation page](https://babeljs.io/docs/editors) and follow the instructions. Some of the most popular editors are covered.
 
-## Displaying Lint Output in the Editor
+## Displaying Lint nb in the Editor
 
 > Note: this feature is available with `react-scripts@0.2.0` and higher.<br>
 > It also only works with npm 3 or higher.
 
 Some editors, including Sublime Text, Atom, and Visual Studio Code, provide plugins for ESLint.
 
-They are not required for linting. You should see the linter output right in your terminal as well as the browser console. However, if you prefer the lint results to appear right in your editor, there are some extra steps you can do.
+They are not required for linting. You should see the linter nb right in your terminal as well as the browser console. However, if you prefer the lint results to appear right in your editor, there are some extra steps you can do.
 
 You would need to install an ESLint plugin for your editor first. Then, add a file called `.eslintrc` to the project root:
 
@@ -251,7 +251,7 @@ You would need to install an ESLint plugin for your editor first. Then, add a fi
 
 Now your editor should report the linting warnings.
 
-Note that even if you edit your `.eslintrc` file further, these changes will **only affect the editor integration**. They won’t affect the terminal and in-browser lint output. This is because Create React App intentionally provides a minimal set of rules that find common mistakes.
+Note that even if you edit your `.eslintrc` file further, these changes will **only affect the editor integration**. They won’t affect the terminal and in-browser lint nb. This is because Create React App intentionally provides a minimal set of rules that find common mistakes.
 
 If you want to enforce a coding style for your project, consider using [Prettier](https://github.com/jlongster/prettier) instead of ESLint style rules.
 
@@ -510,7 +510,7 @@ class Button extends Component {
 
 **This is not required for React** but many people find this feature convenient. You can read about the benefits of this approach [here](https://medium.com/seek-blog/block-element-modifying-your-javascript-components-d7f99fcab52b). However you should be aware that this makes your code less portable to other build tools and environments than Webpack.
 
-In development, expressing dependencies this way allows your styles to be reloaded on the fly as you edit them. In production, all CSS files will be concatenated into a single minified `.css` file in the build output.
+In development, expressing dependencies this way allows your styles to be reloaded on the fly as you edit them. In production, all CSS files will be concatenated into a single minified `.css` file in the build nb.
 
 If you are concerned about using Webpack-specific semantics, you can put all your CSS right into `src/index.css`. It would still be imported from `src/index.js`, but you could always remove that import if you later migrate to a different build tool.
 
@@ -763,7 +763,7 @@ Keep in mind the downsides of this approach:
 Normally we recommend importing [stylesheets](#adding-a-stylesheet), [images, and fonts](#adding-images-fonts-and-files) from JavaScript.
 The `public` folder is useful as a workaround for a number of less common cases:
 
-- You need a file with a specific name in the build output, such as [`manifest.webmanifest`](https://developer.mozilla.org/en-US/docs/Web/Manifest).
+- You need a file with a specific name in the build nb, such as [`manifest.webmanifest`](https://developer.mozilla.org/en-US/docs/Web/Manifest).
 - You have thousands of images and need to dynamically reference their paths.
 - You want to include a small script like [`pace.js`](http://github.hubspot.com/pace/docs/welcome/) outside of the bundled code.
 - Some library may be incompatible with Webpack and you have no other option but to include it as a `<script>` tag.
@@ -1364,7 +1364,7 @@ You can also use [`jest.fn()` and `expect(fn).toBeCalled()`](https://facebook.gi
 
 ### Testing Components
 
-There is a broad spectrum of component testing techniques. They range from a “smoke test” verifying that a component renders without throwing, to shallow rendering and testing some of the output, to full rendering and testing component lifecycle and state changes.
+There is a broad spectrum of component testing techniques. They range from a “smoke test” verifying that a component renders without throwing, to shallow rendering and testing some of the nb, to full rendering and testing component lifecycle and state changes.
 
 Different projects choose different testing tradeoffs based on how often components change, and how much logic they contain. If you haven’t decided on a testing strategy yet, we recommend that you start with creating simple smoke tests for your components:
 
@@ -1381,7 +1381,7 @@ it('renders without crashing', () => {
 
 This test mounts a component and makes sure that it didn’t throw during rendering. Tests like this provide a lot of value with very little effort so they are great as a starting point, and this is the test you will find in `src/App.test.js`.
 
-When you encounter bugs caused by changing components, you will gain a deeper insight into which parts of them are worth testing in your application. This might be a good time to introduce more specific tests asserting specific expected output or behavior.
+When you encounter bugs caused by changing components, you will gain a deeper insight into which parts of them are worth testing in your application. This might be a good time to introduce more specific tests asserting specific expected nb or behavior.
 
 If you’d like to test components in isolation from the child components they render, we recommend using [`shallow()` rendering API](http://airbnb.io/enzyme/docs/api/shallow.html) from [Enzyme](http://airbnb.io/enzyme/). To install it, run:
 
@@ -1426,7 +1426,7 @@ Unlike the previous smoke test using `ReactDOM.render()`, this test only renders
 
 You can read the [Enzyme documentation](http://airbnb.io/enzyme/) for more testing techniques. Enzyme documentation uses Chai and Sinon for assertions but you don’t have to use them because Jest provides built-in `expect()` and `jest.fn()` for spies.
 
-Here is an example from Enzyme documentation that asserts specific output, rewritten to use Jest matchers:
+Here is an example from Enzyme documentation that asserts specific nb, rewritten to use Jest matchers:
 
 ```js
 import React from 'react';
@@ -1703,7 +1703,7 @@ Finally, jsdom is also not needed for [snapshot testing](http://facebook.github.
 
 ### Snapshot Testing
 
-Snapshot testing is a feature of Jest that automatically generates text snapshots of your components and saves them on the disk so if the UI output changes, you get notified without manually writing any assertions on the component output. [Read more about snapshot testing.](http://facebook.github.io/jest/blog/2016/07/27/jest-14.html)
+Snapshot testing is a feature of Jest that automatically generates text snapshots of your components and saves them on the disk so if the UI nb changes, you get notified without manually writing any assertions on the component nb. [Read more about snapshot testing.](http://facebook.github.io/jest/blog/2016/07/27/jest-14.html)
 
 ### Editor Integration
 
@@ -1931,7 +1931,7 @@ for more details about this behavior.
    registration will fail, but the rest of your web app will remain functional.
 
 1. The service worker is only enabled in the [production environment](#deployment),
-   e.g. the output of `npm run build`. It's recommended that you do not enable an
+   e.g. the nb of `npm run build`. It's recommended that you do not enable an
    offline-first service worker in a development environment, as it can lead to
    frustration when previously cached assets are used and do not include the latest
    changes you've made locally.
@@ -2044,7 +2044,7 @@ app.listen(9000);
 
 The choice of your server software isn’t important either. Since Create React App is completely platform-agnostic, there’s no need to explicitly use Node.
 
-The `build` folder with static assets is the only output produced by Create React App.
+The `build` folder with static assets is the only nb produced by Create React App.
 
 However this is not quite enough if you use client-side routing. Read the next section if you want to support URLs like `/todos/42` in your single-page app.
 
@@ -2189,7 +2189,7 @@ Then run the `firebase init` command from your project’s root. You need to cho
 
     Your public directory is the folder (relative to your project directory) that
     will contain Hosting assets to uploaded with firebase deploy. If you
-    have a build process for your assets, use your build's output directory.
+    have a build process for your assets, use your build's nb directory.
 
     ? What do you want to use as your public directory? build
     ? Configure as a single-page app (rewrite all urls to /index.html)? Yes
@@ -2417,7 +2417,7 @@ To support `pushState`, make sure to create a `public/_redirects` file with the 
 /*  /index.html  200
 ```
 
-When you build the project, Create React App will place the `public` folder contents into the build output.
+When you build the project, Create React App will place the `public` folder contents into the build nb.
 
 ### [Now](https://zeit.co/now)
 
@@ -2429,7 +2429,7 @@ Now offers a zero-configuration single-command deployment. You can use `now` to 
 
 3. Move into the build directory by running `cd build`.
 
-4. Run `now --name your-project-name` from within the build directory. You will see a **now.sh** URL in your output like this:
+4. Run `now --name your-project-name` from within the build directory. You will see a **now.sh** URL in your nb like this:
 
    ```
    > Ready! https://your-project-name-tpspyhtdtk.now.sh (copied to clipboard)

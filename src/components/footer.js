@@ -1,17 +1,8 @@
 import React from 'react';
-import github from 'assets/svg/github.svg';
-import githubGreen from 'assets/svg/github-green.svg';
 import PropTypes from 'prop-types';
 
-const Footer = props => (
+const Footer = () => (
   <footer className="footer">
-    <div className="logo">
-      {props.dark ? (
-        <img src={githubGreen} alt="Github Logo" className="logo--github" />
-      ) : (
-        <img src={github} alt="Github Logo" className="logo--github" />
-      )}
-    </div>
     <a
       href="http://www.summitech.ng"
       target="_blank"

@@ -15,7 +15,7 @@ class App extends Component {
       secondOption: null,
       showThird: false,
       thirdOption: null,
-      output: '',
+      nb: '',
       usage: ''
     };
 
@@ -41,7 +41,7 @@ class App extends Component {
         showSecond: true,
         secondOption: null,
         showThird: false,
-        output: '',
+        nb: '',
         usage: ''
       });
     } else {
@@ -50,12 +50,12 @@ class App extends Component {
   };
 
   onSecondChange = (selectedOption) => {
-    if (selectedOption.output) {
-      this.setState({ output: '', usage: '' }, () => {
+    if (selectedOption.usage) {
+      this.setState({ nb: '', usage: '' }, () => {
         this.setState({
           secondOption: selectedOption,
           showThird: false,
-          output: selectedOption.output,
+          nb: selectedOption.nb,
           usage: selectedOption.usage,
           thirdOption: null
         });
@@ -65,17 +65,17 @@ class App extends Component {
         secondOption: selectedOption,
         showThird: true,
         thirdOption: null,
-        output: '',
+        nb: '',
         usage: ''
       });
     }
   };
 
   onThirdChange = (selectedOption) => {
-    this.setState({ output: '', usage: '' }, () => {
+    this.setState({ nb: '', usage: '' }, () => {
       this.setState({
         thirdOption: selectedOption,
-        output: selectedOption.output,
+        nb: selectedOption.nb,
         usage: selectedOption.usage
       });
     });
@@ -88,7 +88,7 @@ class App extends Component {
       thirdOption,
       showSecond,
       showThird,
-      output,
+      nb,
       usage
     } = this.state;
     return (
@@ -147,9 +147,6 @@ class App extends Component {
                 <h2 className="board__title  dark-white">Usage</h2>
 
                 <div className="board board--1">
-                  <p className="faded">git config --global user.name "Sam Smith"</p>
-                  <p className="faded">git config --global user.name "Sam Smith"</p>
-
                   <pre>
                     {usage.length ? (
                       <Typist avgTypingDelay={50} cursor={{ show: false }}>
@@ -159,13 +156,13 @@ class App extends Component {
                   </pre>
                 </div>
 
-                {output.length ? (
+                {nb ? (
                   <React.Fragment>
-                    <h2 className="board__title  dark-white">Output</h2>
+                    <h2 className="board__title  dark-white">Note</h2>
                     <div className="board board--2">
-                      <pre>
+                      <pre className="faded">
                         <Typist avgTypingDelay={50} cursor={{ show: false }}>
-                          {output}
+                          {nb}
                         </Typist>
                       </pre>
                     </div>
