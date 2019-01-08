@@ -442,7 +442,8 @@ body {
           font-weight: bold; }
         .home .content .options-select__menu {
           margin: 0;
-          padding: 0 !important; }
+          padding: 0 !important;
+          top: 90%; }
           .home .content .options-select__menu-list {
             padding: 0 !important; }
     @media (max-width: 991px) {
