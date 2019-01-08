@@ -322,6 +322,9 @@ template {
   src: url("../assets/fonts/OpenSans/OpenSans-ExtraBold.ttf") format("truetype");
   text-rendering: optimizeLegibility; }
 
+.d-none {
+  display: none; }
+
 html {
   font-size: 62.5%; }
 
@@ -453,6 +456,9 @@ body {
       background: #20252d;
       border-radius: 1rem;
       border-left: 1rem solid #00bfaa;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
       padding: 3rem;
       transition: 0.3s background cubic-bezier(0.175, 0.885, 0.32, 1.275); }
       .home .content .board .faded {
@@ -477,6 +483,40 @@ body {
 
 .Typist {
   white-space: pre-wrap; }
+
+.copy {
+  position: relative;
+  display: inline-block; }
+  .copy__image {
+    cursor: pointer;
+    position: relative;
+    width: 2rem; }
+  .copy__popover {
+    background: #fff;
+    border-radius: 0.3rem;
+    bottom: 50%;
+    color: #20252d !important;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+    position: absolute;
+    opacity: 0;
+    right: 50%;
+    text-align: center;
+    text-transform: capitalize;
+    transform: translateX(50%);
+    transition: all 0.3s; }
+    .copy__popover.show {
+      opacity: 1;
+      bottom: 150%; }
+    .copy__popover::after {
+      border: 5px transparent solid;
+      border-top-color: #fff;
+      content: '';
+      display: block;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%); }
 
 .toggle {
   display: flex;

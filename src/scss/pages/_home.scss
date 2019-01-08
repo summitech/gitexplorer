@@ -163,6 +163,9 @@
       background: $color-dark;
       border-radius: 1rem;
       border-left: 1rem solid $color-primary;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
       padding: 3rem;
       transition: 0.3s background cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
@@ -205,6 +208,6 @@
   }
 }
 
-.Typist{
-  white-space: pre-wrap ;
+.Typist {
+  white-space: pre-wrap;
 }
