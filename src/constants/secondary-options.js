@@ -30,14 +30,6 @@ export const secondaryOptions = {
     }
   ],
 
-  exit: [
-    {
-      value: 'exit-log',
-      label: 'git log',
-      usage: 'Type q in the terminal to exit the logs'
-    }
-  ],
-
   revert: [
     {
       value: 'specific-commit',
@@ -70,7 +62,8 @@ export const secondaryOptions = {
     {
       value: 'logs',
       label: 'commit logs/history',
-      usage: 'git log'
+      usage: 'git log',
+      nb: 'Type q in the terminal to exit the logs'
     },
     {
       value: 'uncommittedChanges',

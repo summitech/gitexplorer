@@ -102,7 +102,7 @@ class App extends Component {
                   Git <span>Command</span> Explorer
                 </h2>
                 <p className="content__subtitle dark-grey">
-                  Find the right commands you need without digging through the web
+                  Find the right commands you need without digging through the web.
                 </p>
 
                 <div className="options">
@@ -110,8 +110,8 @@ class App extends Component {
 
                   <Select
                     placeholder="..."
-                    className="options__select"
-                    classNamePrefix="options__select"
+                    className="options-select"
+                    classNamePrefix="options-select"
                     isSearchable={true}
                     onChange={this.onFirstChange}
                     value={firstOption}
@@ -121,8 +121,8 @@ class App extends Component {
                   {showSecond ? (
                     <Select
                       placeholder="..."
-                      className="options__select"
-                      classNamePrefix="options__select"
+                      className="options-select"
+                      classNamePrefix="options-select"
                       isSearchable={true}
                       onChange={this.onSecondChange}
                       value={secondOption}
@@ -133,8 +133,8 @@ class App extends Component {
                   {showThird ? (
                     <Select
                       placeholder="..."
-                      className="options__select"
-                      classNamePrefix="options__select"
+                      className="options-select"
+                      classNamePrefix="options-select"
                       isSearchable={true}
                       onChange={this.onThirdChange}
                       value={thirdOption}
@@ -143,31 +143,32 @@ class App extends Component {
                   ) : null}
                 </div>
               </div>
-              <div className="col-7">
-                <h2 className="board__title  dark-white">Usage</h2>
-
-                <div className="board board--1">
-                  <pre>
-                    {usage.length ? (
-                      <Typist avgTypingDelay={50} cursor={{ show: false }}>
-                        {usage}
-                      </Typist>
-                    ) : null}
-                  </pre>
-                </div>
-
-                {nb ? (
-                  <React.Fragment>
-                    <h2 className="board__title  dark-white">Note</h2>
-                    <div className="board board--2">
-                      <pre className="faded">
+              <div className="col-7 boards">
+                <div className="board__group">
+                  <h2 className="board__title  dark-white">Usage</h2>
+                  <div className="board board--1">
+                    <pre>
+                      {usage.length ? (
                         <Typist avgTypingDelay={50} cursor={{ show: false }}>
-                          {nb}
+                          {usage}
                         </Typist>
-                      </pre>
+                      ) : null}
+                    </pre>
+                  </div>
+
+                  {nb ? (
+                    <div className="board__group board__group--2">
+                      <h2 className="board__title  dark-white">Note</h2>
+                      <div className="board board--2">
+                        <pre className="faded">
+                          <Typist avgTypingDelay={50} cursor={{ show: false }}>
+                            {nb}
+                          </Typist>
+                        </pre>
+                      </div>
                     </div>
-                  </React.Fragment>
-                ) : null}
+                  ) : null}
+                </div>
               </div>
             </div>
           </div>

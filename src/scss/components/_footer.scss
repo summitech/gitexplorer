@@ -1,5 +1,4 @@
 .footer {
-  margin-top: 5rem;
   &__copyright {
     display: block;
     @include text();
@@ -12,11 +11,25 @@
     &:hover {
       color: initial;
     }
+
+    a {
+      color: inherit;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   .logo {
     display: flex;
     justify-content: flex-end;
+
+    @include respond('as') {
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
     &--github {
       width: 4rem;
       height: 4rem;

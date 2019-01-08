@@ -7,7 +7,6 @@ const options = [
   { value: 'delete', label: 'delete/remove' },
   { value: 'compareCommits', label: 'compare two commits' },
   { value: 'configure', label: 'configure' },
-  { value: 'exit', label: 'exit' },
   { value: 'clone', label: 'clone' },
   { value: 'ignore', label: 'ignore' },
   // { value: 'correct', label: 'correct' },
