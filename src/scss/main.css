@@ -322,6 +322,9 @@ template {
   src: url("../assets/fonts/OpenSans/OpenSans-ExtraBold.ttf") format("truetype");
   text-rendering: optimizeLegibility; }
 
+.d-none {
+  display: none; }
+
 html {
   font-size: 62.5%; }
 

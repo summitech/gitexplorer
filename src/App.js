@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Footer, Nav } from 'components';
 import Typist from 'react-typist';
+import { isMobile } from 'react-device-detect';
 import { optionsFirst, optionsSecond, optionsThird } from 'constants/index';
 import Select from 'react-select';
 import classnames from 'classnames';
@@ -144,7 +145,9 @@ class App extends Component {
                 </div>
               </div>
               <div className="col-7 boards">
-                <div className="board__group">
+                <div
+                  className={`board__group board__group--1 ${isMobile && !usage ? ' d-none' : ''}`}
+                >
                   <h2 className="board__title  dark-white">Usage</h2>
                   <div className="board board--1">
                     <p className="faded">git config --global user.name "Sam Smith"</p>
