@@ -1,0 +1,64 @@
+$width: 45px;
+$height: 10px;
+
+.toggle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  &__option {
+    @include text();
+    transition: all 0.3s;
+    &--left {
+      margin-right: 1rem;
+    }
+    &--right {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.toggler {
+  display: inline-block;
+  margin: (($height * 1.4 - $height) / 2) + 5px;
+  margin: (($height * 1.5 - $height) / 2);
+  width: $width;
+  height: $height;
+  text-align: center;
+  position: relative;
+  input[type='checkbox'] {
+    display: none;
+    &:checked ~ .button {
+      background: $color-white;
+      left: $width - ($height * 2);
+      transition: 0.5s;
+    }
+    &:checked ~ .switch {
+      background: darken($color-primary, 1);
+      transition: 0.5s;
+    }
+  }
+  .switch {
+    display: block;
+    width: $width;
+    height: $height;
+    background: $color-primary;
+    border-radius: $height / 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  .button {
+    height: $height * 2;
+    width: $height * 2;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    top: ($height * 2 - $height) / -2;
+    left: 0;
+    box-shadow: 0 $width / 50 $width / 25 rgba(black, 0.4);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+}

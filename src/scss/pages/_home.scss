@@ -1,0 +1,210 @@
+.home {
+  background: $color-grey;
+  transition: background 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  &__container {
+    display: flex;
+    padding: 3rem 5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+
+    @include respond('xs') {
+      padding: 3rem;
+    }
+  }
+
+  &.dark {
+    background: $color-dark;
+
+    .dark-white {
+      color: $color-white !important;
+    }
+
+    .board {
+      background: rgba($color-white, 0.2) !important;
+    }
+
+    .dark-grey {
+      color: rgba($color-white, 0.8) !important;
+    }
+  }
+
+  .container {
+    display: flex;
+    width: 100%;
+    @include respond('lg') {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    @include respond('xl') {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+
+    @include respond('am') {
+      flex-direction: column;
+    }
+
+    .col {
+      flex: 1;
+      padding: 0 2rem;
+
+      &-5 {
+        width: calc((100% / 12) * 5);
+        @include respond('am') {
+          width: 100%;
+          padding: 0;
+        }
+      }
+
+      &-7 {
+        width: calc((100% / 12) * 7);
+        @include respond('am') {
+          width: 100%;
+          padding: 0;
+        }
+      }
+
+      @include respond('am') {
+        flex: 1;
+        padding: 0;
+      }
+    }
+  }
+
+  .content {
+    flex: 1;
+    padding-top: 10rem;
+
+    &__title {
+      color: $color-dark;
+      letter-spacing: 1px;
+
+      span {
+        color: $color-primary;
+      }
+    }
+
+    &__subtitle {
+      @include text();
+      width: 30rem;
+
+      @include respond('xs') {
+        width: 100%;
+      }
+    }
+
+    .options {
+      margin: 5rem 0;
+      &__title {
+        @include text();
+        color: $color-primary;
+        font-weight: bold;
+        margin-bottom: 2rem;
+      }
+
+      &-select {
+        width: 80%;
+        margin-bottom: 2rem;
+
+        @include respond('am') {
+          width: 100%;
+        }
+
+        &__value-container {
+          padding-left: 1.5rem;
+        }
+
+        &__control {
+          height: 5rem;
+          border: none;
+          box-shadow: 1px 2px 2px rgba($color-black, 0.1);
+        }
+
+        &__indicator-separator {
+          display: none;
+        }
+
+        &__dropdown-indicator {
+          padding-right: 1.5rem;
+        }
+
+        &__single-value {
+          @include text();
+          font-weight: bold;
+        }
+
+        &__menu {
+          margin: 0;
+          padding: 0 !important;
+          top: 90%;
+
+          &-list {
+            padding: 0 !important;
+          }
+        }
+      }
+    }
+
+    .boards {
+      @include respond('am') {
+        margin-bottom: 15rem;
+      }
+    }
+
+    .board {
+      background: $color-dark;
+      border-radius: 1rem;
+      border-left: 1rem solid $color-primary;
+      padding: 3rem;
+      transition: 0.3s background cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+      .faded {
+        opacity: 0.5;
+      }
+
+      pre {
+        margin: 0;
+      }
+
+      &__title {
+        color: $color-dark;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+      }
+
+      &--2 {
+        .Typist {
+          font-weight: normal;
+        }
+      }
+
+      &__group {
+        &--2 {
+          margin-top: 5rem;
+        }
+      }
+
+      @include respond('xs') {
+        padding: 2rem;
+      }
+
+      * {
+        color: $color-white;
+        letter-spacing: 1px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.Typist{
+  white-space: pre-wrap ;
+}

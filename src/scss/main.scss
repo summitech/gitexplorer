@@ -1,0 +1,21 @@
+// Core & Helpers
+@import "core/reboot";
+@import "core/variables";
+@import "core/mixins";
+@import "core/fonts";
+
+// Utilities
+@import "utilities/utils";
+@import "utilities/text";
+
+//pages
+@import "pages/home";
+
+//components
+@import "components/toggle";
+@import "components/nav";
+@import "components/footer";
+
+//animations
+
+@import "utilities/overrides";

@@ -1,0 +1,44 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["eslint:recommended", "plugin:react/recommended", "airbnb-base"],
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "16.6.0"
+    }
+  },
+  "parserOptions": {
+    "ecmaVersion": 9,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "comma-dangle": 0,
+    "global-require": "off",
+    "prefer-spread": "off",
+    "no-console": "off",
+    "no-restricted-syntax": "off",
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "react/prop-types": ["error", { "ignore": ["navigation"] }],
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-underscore-dangle": "off",
+    "no-use-before-define": "off",
+    "class-methods-use-this": "off",
+    "import/no-cycle": "off",
+    "no-nested-ternary": "off",
+    "consistent-return": "off",
+    "react/jsx-filename-extension": "off",
+    "guard-for-in": "off",
+    "import/no-unresolved": "off",
+    "no-return-assign": "off"
+  }
+}

@@ -1,0 +1,39 @@
+.footer {
+  &__copyright {
+    display: block;
+    @include text();
+    text-align: center;
+
+    span {
+      color: crimson;
+    }
+
+    &:hover {
+      color: initial;
+    }
+
+    a {
+      color: inherit;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .logo {
+    display: flex;
+    justify-content: flex-end;
+
+    @include respond('as') {
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    &--github {
+      width: 4rem;
+      height: 4rem;
+      fill: blue;
+    }
+  }
+}
