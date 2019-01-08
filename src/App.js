@@ -4,6 +4,7 @@ import Typist from 'react-typist';
 import { isMobile } from 'react-device-detect';
 import { optionsFirst, optionsSecond, optionsThird } from 'constants/index';
 import Select from 'react-select';
+import clipboard from 'assets/images/clipboard.svg';
 import classnames from 'classnames';
 
 class App extends Component {
@@ -17,23 +18,19 @@ class App extends Component {
       showThird: false,
       thirdOption: null,
       nb: '',
-      usage: ''
+      usage: '',
+      copied: false
     };
-
-    this.toggleMode = this.toggleMode.bind(this);
-    this.onFirstChange = this.onFirstChange.bind(this);
-    this.onSecondChange = this.onSecondChange.bind(this);
-    this.onThirdChange = this.onThirdChange.bind(this);
   }
 
-  toggleMode() {
+  toggleMode = () => {
     this.setState(
       prevState => ({ dark: !prevState.dark }),
       () => {
         localStorage.setItem('dark', this.state.dark);
       }
     );
-  }
+  };
 
   onFirstChange = (selectedOption) => {
     if (this.state.secondOption) {
@@ -82,6 +79,36 @@ class App extends Component {
     });
   };
 
+  onCopy = () => {
+    this.setState({ copied: true }, () => {
+      if (this.timeout) {
+        clearInterval(this.timeout);
+      }
+      this.timeout = setTimeout(() => {
+        this.setState({ copied: false });
+      }, 1000);
+    });
+  };
+
+  copyUsage = () => {
+    const el = document.createElement('textarea');
+    el.value = this.state.usage;
+    el.setAttribute('readonly', '');
+    el.style.position = 'absolute';
+    el.style.left = '-9999px';
+    document.body.appendChild(el);
+    const selected = document.getSelection().rangeCount > 0 ? document.getSelection().getRangeAt(0) : false;
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    this.onCopy();
+
+    if (selected) {
+      document.getSelection().removeAllRanges();
+      document.getSelection().addRange(selected);
+    }
+  };
+
   render() {
     const {
       firstOption,
@@ -90,7 +117,8 @@ class App extends Component {
       showSecond,
       showThird,
       nb,
-      usage
+      usage,
+      copied
     } = this.state;
     return (
       <div className={`home ${classnames({ dark: this.state.dark })}`}>
@@ -155,8 +183,23 @@ class App extends Component {
                         <Typist avgTypingDelay={50} cursor={{ show: false }}>
                           {usage}
                         </Typist>
-                      ) : null}
+                      ) : (
+                        <div />
+                      )}
                     </pre>
+                    {usage.length ? (
+                      <div className="copy">
+                        <span className={`copy__popover ${copied ? 'show' : ''}`}>
+                          command copied
+                        </span>
+                        <img
+                          className="copy__image"
+                          onClick={this.copyUsage}
+                          src={clipboard}
+                          alt="Clipboard"
+                        />
+                      </div>
+                    ) : null}
                   </div>
 
                   {nb ? (
