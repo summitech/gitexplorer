@@ -273,7 +273,7 @@ progress {
   font: inherit;
   -webkit-appearance: button; }
 
-output {
+nb {
   display: inline-block; }
 
 summary {
@@ -478,6 +478,9 @@ body {
         letter-spacing: 1px;
         font-weight: 600; }
 
+.Typist {
+  white-space: pre-wrap; }
+
 .toggle {
   display: flex;
   justify-content: flex-start;
@@ -605,3 +608,8 @@ body {
     width: 4rem;
     height: 4rem;
     fill: blue; }
+  .fine-print {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #4a4a4a;
+  }
