@@ -1,8 +1,5 @@
 import React from 'react';
-import Select from 'react-select';
 import PropTypes from 'prop-types';
-
-const options = [{ value: 'English', label: 'English' }];
 
 class Nav extends React.Component {
   constructor(props) {
@@ -13,20 +10,8 @@ class Nav extends React.Component {
   }
 
   render() {
-    const { selectedOption } = this.state;
     return (
       <nav className="nav">
-        {/* <div className="language">
-          <p className="language__title dark-white">Language</p>
-          <Select
-            className="language__select"
-            classNamePrefix="language__select"
-            isSearchable={false}
-            value={selectedOption}
-            options={options}
-          />
-        </div> */}
-
         <div className="toggle">
           <p className="toggle__option toggle__option--left  dark-white">Light Mode</p>
           <div className="toggler">

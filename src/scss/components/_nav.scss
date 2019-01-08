@@ -1,20 +1,20 @@
 .nav {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: flex-end;
 
-  @include respond("xs") {
+  @include respond('xs') {
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
   }
 
   .language {
-    display: flex;
     align-items: center;
+    display: flex;
     margin-right: 4rem;
 
-    @include respond("xs") {
+    @include respond('xs') {
       margin-right: 0;
       margin-bottom: 2rem;
     }

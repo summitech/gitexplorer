@@ -9,7 +9,7 @@
     justify-content: space-between;
     min-height: 100vh;
 
-    @include respond("xs") {
+    @include respond('xs') {
       padding: 3rem;
     }
   }
@@ -33,12 +33,12 @@
   .container {
     display: flex;
     width: 100%;
-    @include respond("lg") {
+    @include respond('lg') {
       max-width: 1140px;
       margin: 0 auto;
     }
 
-    @include respond("xl") {
+    @include respond('xl') {
       max-width: 1400px;
       margin: 0 auto;
     }
@@ -48,7 +48,7 @@
     display: flex;
     flex-direction: row;
 
-    @include respond("am") {
+    @include respond('am') {
       flex-direction: column;
     }
 
@@ -58,7 +58,7 @@
 
       &-5 {
         width: calc((100% / 12) * 5);
-        @include respond("am") {
+        @include respond('am') {
           width: 100%;
           padding: 0;
         }
@@ -66,13 +66,13 @@
 
       &-7 {
         width: calc((100% / 12) * 7);
-        @include respond("am") {
+        @include respond('am') {
           width: 100%;
           padding: 0;
         }
       }
 
-      @include respond("am") {
+      @include respond('am') {
         flex: 1;
         padding: 0;
       }
@@ -96,7 +96,7 @@
       @include text();
       width: 30rem;
 
-      @include respond("xs") {
+      @include respond('xs') {
         width: 100%;
       }
     }
@@ -110,12 +110,16 @@
         margin-bottom: 2rem;
       }
 
-      &__select {
+      &-select {
         width: 80%;
         margin-bottom: 2rem;
 
-        @include respond("am") {
+        @include respond('am') {
           width: 100%;
+        }
+
+        &__value-container {
+          padding-left: 1.5rem;
         }
 
         &__control {
@@ -126,6 +130,10 @@
 
         &__indicator-separator {
           display: none;
+        }
+
+        &__dropdown-indicator {
+          padding-right: 1.5rem;
         }
 
         &__single-value {
@@ -141,6 +149,12 @@
             padding: 0 !important;
           }
         }
+      }
+    }
+
+    .boards {
+      @include respond('am') {
+        margin-bottom: 15rem;
       }
     }
 
@@ -165,16 +179,19 @@
         margin-bottom: 1rem;
       }
 
-      &--1 {
-        // min-height: 20rem;
-        margin-bottom: 5rem;
-      }
-
       &--2 {
-        // min-height: 40rem;
+        .Typist {
+          font-weight: normal;
+        }
       }
 
-      @include respond("xs") {
+      &__group {
+        &--2 {
+          margin-top: 5rem;
+        }
+      }
+
+      @include respond('xs') {
         padding: 2rem;
       }
 
