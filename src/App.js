@@ -145,7 +145,8 @@ class App extends Component {
               </div>
               <div className="col-7 boards">
                 <div className="board__group">
-                  <h2 className="board__title  dark-white">Usage</h2>
+                  <h2 className="board__title dark-white">Usage</h2>
+                  <p className="dark-white fine-print">Results will be shown here:</p>
                   <div className="board board--1">
                     <pre>
                       {usage.length ? (
