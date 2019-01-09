@@ -1,5 +1,5 @@
 const options = [
-  // { value: 'revert', label: 'revert' },
+  { value: 'revert', label: 'revert/reset' },
   { value: 'initialize', label: 'initialize' },
   // { value: 'undo', label: 'undo' },
   { value: 'modify', label: 'modify' },
