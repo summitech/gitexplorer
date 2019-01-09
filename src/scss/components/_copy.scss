@@ -1,0 +1,40 @@
+.copy {
+  position: relative;
+  display: inline-block;
+  &__image {
+    cursor: pointer;
+    position: relative;
+    width: 2rem;
+  }
+
+  &__popover {
+    background: $color-white;
+    border-radius: 0.3rem;
+    bottom: 50%;
+    color: $color-dark !important;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+    position: absolute;
+    opacity: 0;
+    right: 50%;
+    text-align: center;
+    text-transform: capitalize;
+    transform: translateX(50%);
+    transition: all 0.3s;
+
+    &.show {
+      opacity: 1;
+      bottom: 150%;
+    }
+
+    &::after {
+      @include triangle('down', 5px, $color-white);
+      content: '';
+      display: block;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+    }
+  }
+}
