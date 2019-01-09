@@ -33,9 +33,8 @@ export const secondaryOptions = {
   revert: [
     {
       value: 'specific-commit',
-      label: 'to a specific commit',
-      nb: 'Water is boiling',
-      usage: 'pour water in kettle'
+      label: 'to last commit',
+      usage: 'git reset --hard'
     }
   ],
   initialize: [
