@@ -9,6 +9,7 @@ const options = [
   { value: 'configure', label: 'configure' },
   { value: 'clone', label: 'clone' },
   { value: 'ignore', label: 'ignore' },
+  { value: 'rename', label: 'rename' },
   // { value: 'correct', label: 'correct' },
 ];
 

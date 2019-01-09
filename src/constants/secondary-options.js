@@ -88,6 +88,12 @@ export const secondaryOptions = {
       label: 'stash',
       usage: 'git stash list'
     },
+    {
+      value: 'branch',
+      label: 'branches',
+      usage: 'git branch',
+      nb: 'The active branch is prefixed with *'
+    }
   ],
   delete: [
     {
@@ -177,4 +183,10 @@ export const secondaryOptions = {
       usage: 'git push -u origin <branchname>'
     }
   ],
+  rename: [
+    {
+      value: 'branch',
+      label: 'branch'
+    }
+  ]
 };
