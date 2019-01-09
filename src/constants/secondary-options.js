@@ -57,6 +57,12 @@ export const secondaryOptions = {
       label: 'my last commit but leave the commit message as is',
       usage: 'git add . \ngit commit --amend --no-edit'
     },
+    {
+      value: 'remoteUrl',
+      label: 'repo\'s remote url',
+      usage: 'git remote set-url <alias> <url>',
+      nb: '<alias> is your remote name e.g origin'
+    }
   ],
   show: [
     {
@@ -99,6 +105,12 @@ export const secondaryOptions = {
       value: 'stash',
       label: 'stash',
       usage: 'git stash clear'
+    },
+    {
+      value: 'untracked-files',
+      label: 'untracked files',
+      usage: 'git clean -<flag>',
+      nb: 'replace -<flag> with:\n -i for interactive command\n -n to preview what will be removed\n -f to remove forcefully\n -d to remove directories\n -X to remove ignored files\n -x to remove ignored and non-ignored files'
     }
   ],
   compareCommits: [
