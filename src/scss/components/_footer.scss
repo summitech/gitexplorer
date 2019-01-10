@@ -36,4 +36,22 @@
       fill: blue;
     }
   }
+
+  &__link {
+    margin-left: 2rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 3px;
+      height: 3px;
+      border-radius: 100%;
+      background-color: white;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -1.2rem;
+    }
+  }
 }
