@@ -1,7 +1,6 @@
 const options = [
   { value: 'revert', label: 'revert/reset' },
   { value: 'initialize', label: 'initialize' },
-  // { value: 'undo', label: 'undo' },
   { value: 'modify', label: 'modify' },
   { value: 'show', label: 'show/view' },
   { value: 'delete', label: 'delete/remove' },
@@ -9,8 +8,7 @@ const options = [
   { value: 'configure', label: 'configure' },
   { value: 'clone', label: 'clone' },
   { value: 'ignore', label: 'ignore' },
-  { value: 'rename', label: 'rename' },
-  // { value: 'correct', label: 'correct' },
+  { value: 'rename', label: 'rename' }
 ];
 
 export const primaryOptions = options.sort((x, y) => {

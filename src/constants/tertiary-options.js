@@ -30,5 +30,5 @@ export const tertiaryOptions = {
       label: 'from outside the branch',
       usage: 'git branch -m <old name> <new name>'
     }
-  ]
+  ],
 };
