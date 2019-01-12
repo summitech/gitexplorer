@@ -11,6 +11,10 @@ Table of Contents
 
 [Contribute](https://github.com/summitech/gitexplorer/blob/master/README.md#contribute)
 
+[Donate](https://github.com/summitech/gitexplorer/blob/master/README.md#donate)
+
+[RoadMap](https://github.com/summitech/gitexplorer/blob/master/README.md#roadmap)
+
 ### Intro
 Last year, we came across [Sarah Drasner's array explorer](https://github.com/sdras/array-explorer). It is a really cool resource for anyone to eaisly figure out the best JS array method to use. We loved it and decided to built something similar for Git.
 
@@ -86,7 +90,8 @@ show: [
   ```
   
   then supply `tertiary-options.js` file the necessary data e.g.
-  ```logs: [
+  ```
+  logs: [
     {
       value: 'all',
       label: 'all',
@@ -105,6 +110,17 @@ show: [
       usage: 'git log --since=period',
       nb: 'Replace period with intended timeframe e.g git log --since=3days. You can use dates like 2018-12-31.\n\n Similar flags are --until, --before, --after'
     }
-  ],
+  ]
   ```
 4. Once you are done, add, commit, push and create a PR to Master.
+
+### Donate
+
+ You can also contribute to the continued success of the project via donation. Please click this [link](https://rave.flutterwave.com/donate/bavfmdlomzs2).
+
+ ### RoadMap
+
+ - [x] Enforce HTTPs & offline capabilities
+ - [x] Open source
+ - [ ] PWA
+ - [ ] Shareable commands
