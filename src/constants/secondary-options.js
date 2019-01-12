@@ -1,23 +1,16 @@
 export const secondaryOptions = {
-  undo: [
+  commit: [
     {
-      value: 'git-reset',
-      label: 'git reset',
-      nb: 'Food have cook with salt',
-      usage: 'Put salt in rice'
+      value: 'local-changes',
+      label: 'commit all local changes in tracked files',
+      usage: 'git commit -a'
     },
     {
-      value: 'git-commit',
-      label: 'git commit',
-      nb: 'Food have cooked \nwith sugar',
-      usage: 'Put sugar in rice'
-    },
-    {
-      value: 'git-add',
-      label: 'git add',
-      nb: 'Food have cooked \nwith sugar',
-      usage: 'Put sugar in rice'
-    },
+      value: 'local-changes',
+      label: 'commit all stages changes',
+      usage: 'git commit -m <message>',
+      nb: 'Replace <message> with your commit message.'
+    }
   ],
 
   configure: [
@@ -65,7 +58,7 @@ export const secondaryOptions = {
   show: [
     {
       value: 'repo-status',
-      label: 'status of project including staged and unstaged files',
+      label: 'status of project including staged, unstaged and untracked files',
       usage: 'git status'
     },
     {
@@ -172,7 +165,7 @@ export const secondaryOptions = {
       value: 'new-changes',
       label: 'new changes',
       usage: 'git add <file.ext>',
-      nb: 'To add all the files in the current directory, use "git add ."'
+      nb: 'To add all the files in the current directory, use "git add ."\n\nTo add a directory use "git add <directory>"'
     },
     {
       value: 'add-new-branch',

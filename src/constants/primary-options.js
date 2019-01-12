@@ -1,5 +1,6 @@
 const options = [
   { value: 'add', label: 'add' },
+  { value: 'commit', label: 'commit' },
   { value: 'revert', label: 'revert/reset' },
   { value: 'initialize', label: 'initialize' },
   { value: 'modify', label: 'modify' },
@@ -9,7 +10,8 @@ const options = [
   { value: 'configure', label: 'configure' },
   { value: 'clone', label: 'clone' },
   { value: 'ignore', label: 'ignore' },
-  { value: 'rename', label: 'rename' }
+  { value: 'rename', label: 'rename' },
+  { value: 'merge', label: 'merge' }
 ];
 
 export const primaryOptions = options.sort((x, y) => {
