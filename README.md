@@ -52,6 +52,7 @@ These three files are responsible for the options a user can pick.
 `tertiary-option.js` file is responsible for cases where there needs to be a third & final select box.
 
 ###### Steps to add a new command
+0. Please ensure you are not on the master branch. Checkout to a new branch entirely.
 1. Add an object to the array in the `primary-options.js` file. Sample Format:
 ```
  { value: 'show', label: 'show/view' }
