@@ -1,12 +1,17 @@
 # GitExplorer
 Table of Contents
+
 [Intro](https://github.com/summitech/gitexplorer/blob/master/README.md#intro)
+
 [Tech Stack](https://github.com/summitech/gitexplorer/blob/master/README.md#tech-stack)
+
 [Installation](https://github.com/summitech/gitexplorer/blob/master/README.md#installation)
+
 [Makers](https://github.com/summitech/gitexplorer/blob/master/README.md#makers)
+
 [Contribute](https://github.com/summitech/gitexplorer/blob/master/README.md#contribute)
 
-#### Intro
+### Intro
 Last year, we came across [Sarah Drasner's array explorer](https://github.com/sdras/array-explorer). It is a really cool resource for anyone to eaisly figure out the best JS array method to use. We loved it and decided to built something similar for Git.
 
 Website: [Click to find the right git commands without digging through the web.](https://gitexplorer.com)
@@ -16,24 +21,24 @@ Explore and Enjoy!
 You can reach us on [the official git explorer twitter handle](https://twitter.com/gitexplorer) or on [Summitech's twitter handle](https://twitter.com/summitechng).
 
 
-#### Tech Stack
+### Tech Stack
 
 - React
 - Netlify
 - Our first hosting platform was [Surge](https://surge.sh). Super easy to set up and very reliable :+1:. 100% recommend!
 
 
-#### Installation
+### Installation
 ```
-npm run install (Installs all dependencies)
+npm run install (Install all dependencies)
 
 npm run start
 ```
 
-#### Makers
+### Makers
 Awesome devs and designer at [Summitech](https://summitech.ng)
 
-#### Contribute
+### Contribute
 Thank you for contributing to GitExplorer!
 
 Please follow the below instructions to send a Pull Request (Search the website to make sure that this command doesn't already exist).
