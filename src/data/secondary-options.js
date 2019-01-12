@@ -195,5 +195,12 @@ export const secondaryOptions = {
       value: 'branch',
       label: 'branch'
     }
-  ]
+  ],
+  merge: [
+    {
+      value: 'branch',
+      label: 'another branch to current branch',
+      usage: 'git merge <branch-name>'
+    }
+  ],
 };
