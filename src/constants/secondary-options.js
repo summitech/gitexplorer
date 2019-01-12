@@ -1,5 +1,4 @@
 export const secondaryOptions = {
-
   undo: [
     {
       value: 'git-reset',
@@ -64,6 +63,11 @@ export const secondaryOptions = {
     }
   ],
   show: [
+    {
+      value: 'repo-status',
+      label: 'status of project including staged and unstaged files',
+      usage: 'git status'
+    },
     {
       value: 'logs',
       label: 'commit logs/history'
@@ -164,6 +168,16 @@ export const secondaryOptions = {
     }
   ],
   add: [
+    {
+      value: 'new-changes',
+      label: 'new changes',
+      usage: 'git add <file.ext>',
+      nb: 'To add all the files in the current directory, use "git add ."'
+    },
+    {
+      value: 'add-new-branch',
+      label: 'a new branch',
+    },
     {
       value: 'add-repo',
       label: 'new remote repo',

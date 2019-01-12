@@ -31,4 +31,16 @@ export const tertiaryOptions = {
       usage: 'git branch -m <old name> <new name>'
     }
   ],
+  'add-new-branch': [
+    {
+      value: 'no-checkout',
+      label: 'but remain in the current branch I am working from',
+      usage: 'git branch <new name>'
+    },
+    {
+      value: 'checkout',
+      label: 'and switch to the new branch',
+      usage: 'git checkout -b <new name>'
+    }
+  ],
 };
