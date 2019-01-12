@@ -14,3 +14,11 @@ You can reach us on [the official git explorer twitter handle](https://twitter.c
 - React
 - Netlify
 - Our first hosting platform was [Surge](https://surge.sh). Super easy to set up and very reliable :+1:. 100% recommend!
+
+
+#### Installation
+```
+npm run install (Installs all dependencies)
+
+npm run start
+```
