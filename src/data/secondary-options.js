@@ -19,6 +19,18 @@ export const secondaryOptions = {
       label: 'name and email address',
       usage: 'git config --global user.name "username" \n\ngit config --global user.email "email address"',
       nb: 'Your username and email address should be the same as the one used with your git hosting provider i.e. github, bitbucket, gitlab etc'
+    },
+    {
+      value: 'editor',
+      label: 'default editor',
+      usage: 'git config --global core.editor "vim"',
+      nb: 'Change default editor to vim.'
+    },
+    {
+      value: 'color',
+      label: 'enables colorization',
+      usage: 'git config --global core.editor "vim"',
+      nb: 'Enables helpful colorization of command line output'
     }
   ],
 
