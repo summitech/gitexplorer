@@ -142,7 +142,19 @@ export const secondaryOptions = {
       value: 'clone-repo',
       label: 'existing repo',
       usage: 'git clone <repo-url>'
-    }
+    },
+    {
+      value: 'clone-repo-into-a-new-dir',
+      label: 'existing repo into a new directory',
+      usage: 'git clone <repo-url> <directory>',
+      nb: 'The repo is cloned into the specified directory\n\nReplace "directory" with the directory you want'
+    },
+    {
+      value: 'clone-repo-into-a-current-dir',
+      label: 'existing repo into the current directory',
+      usage: 'git clone <repo-url> .',
+      nb: 'The repo is cloned into the current directory\n\nThe current directory is represented with a "." (period)'
+    },
   ],
   ignore: [
     {
