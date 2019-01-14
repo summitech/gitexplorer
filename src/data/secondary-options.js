@@ -139,11 +139,6 @@ export const secondaryOptions = {
   ],
   clone: [
     {
-      value: 'clone-repo',
-      label: 'existing repo',
-      usage: 'git clone <repo-url>'
-    },
-    {
       value: 'clone-repo-into-a-new-dir',
       label: 'existing repo into a new directory',
       usage: 'git clone <repo-url> <directory>',
