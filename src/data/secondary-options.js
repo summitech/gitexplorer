@@ -29,8 +29,14 @@ export const secondaryOptions = {
     {
       value: 'color',
       label: 'enables colorization',
-      usage: 'git config --global core.editor "vim"',
+      usage: 'git config --global color.ui auto',
       nb: 'Enables helpful colorization of command line output'
+    },
+    {
+      value: 'signingkey',
+      label: 'add the GPG key',
+      usage: 'git config --global user.signingkey <your-secret-gpg-key>',
+      nb: 'Git is cryptographically secure, but it’s not foolproof. If you’re taking work from others on the internet and want to verify that commits are actually from a trusted source, Git has a few ways to sign and verify work using GPG.'
     }
   ],
 
@@ -212,7 +218,13 @@ export const secondaryOptions = {
   rename: [
     {
       value: 'branch',
-      label: 'branch'
+      label: 'branch',
+    },
+    {
+      value: 'remoteUrl',
+      label: 'remote',
+      usage: 'git remote rename <oldname> <newname>',
+      nb: 'For example: your cloned fork, and now you want pull all new commits from origin repo. Need rename your origin to myfork, and add new remote origin'
     }
   ],
   merge: [
