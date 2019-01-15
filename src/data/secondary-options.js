@@ -223,8 +223,7 @@ export const secondaryOptions = {
     {
       value: 'remoteUrl',
       label: 'remote',
-      usage: 'git remote rename <oldname> <newname>',
-      nb: 'For example: your cloned fork, and now you want pull all new commits from origin repo. Need rename your origin to myfork, and add new remote origin'
+      usage: 'git remote rename <oldname> <newname>'
     }
   ],
   merge: [
