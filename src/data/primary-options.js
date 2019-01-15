@@ -11,7 +11,8 @@ const options = [
   { value: 'clone', label: 'clone' },
   { value: 'ignore', label: 'ignore' },
   { value: 'rename', label: 'rename' },
-  { value: 'merge', label: 'merge' }
+  { value: 'merge', label: 'merge' },
+  { value: 'squash', label: 'squash' }
 ];
 
 export const primaryOptions = options.sort((x, y) => {
