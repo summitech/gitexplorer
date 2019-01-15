@@ -222,4 +222,12 @@ export const secondaryOptions = {
       usage: 'git merge <branch-name>'
     }
   ],
+  squash: [
+    {
+      value: 'pr',
+      label: 'commits in pull request into single commit',
+      usage: 'git rebase -i <branch name>',
+      nb: 'Make sure that latest commits are fetched from upstream.\n\nFor example (assuming you have a remote named upstream):\n\ngit fetch upstream\ngit rebase -i upstream/master\n\nChange "pick" to "squash" for the commits you wish to squash and save.\n\ngit push origin <topic branch> --force-with-lease'
+    }
+  ]
 };
