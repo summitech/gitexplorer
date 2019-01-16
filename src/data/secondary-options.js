@@ -28,7 +28,7 @@ export const secondaryOptions = {
     },
     {
       value: 'color',
-      label: 'enables colorization',
+      label: 'color',
       usage: 'git config --global color.ui auto',
       nb: 'Enables helpful colorization of command line output'
     },
