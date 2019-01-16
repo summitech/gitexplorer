@@ -12,7 +12,8 @@ const options = [
   { value: 'ignore', label: 'ignore' },
   { value: 'rename', label: 'rename' },
   { value: 'merge', label: 'merge' },
-  { value: 'squash', label: 'squash' }
+  { value: 'squash', label: 'squash' },
+  { value: 'debug', label: 'debug' }
 ];
 
 export const primaryOptions = options.sort((x, y) => {

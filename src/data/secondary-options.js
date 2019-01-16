@@ -131,6 +131,12 @@ export const secondaryOptions = {
       label: 'untracked files',
       usage: 'git clean -<flag>',
       nb: 'replace -<flag> with:\n -i for interactive command\n -n to preview what will be removed\n -f to remove forcefully\n -d to remove directories\n -X to remove ignored files\n -x to remove ignored and non-ignored files'
+    },
+    {
+      value: 'files-from-index',
+      label: 'files from index',
+      usage: 'git rm --cached <file or dir>',
+      nb: 'Use this option to unstage and remove paths only from the index. Working tree files, whether modified or not, will be left alone.'
     }
   ],
   compareCommits: [
@@ -239,6 +245,26 @@ export const secondaryOptions = {
       label: 'commits in pull request into single commit',
       usage: 'git rebase -i <branch name>',
       nb: 'Make sure that latest commits are fetched from upstream.\n\nFor example (assuming you have a remote named upstream):\n\ngit fetch upstream\ngit rebase -i upstream/master\n\nChange "pick" to "squash" for the commits you wish to squash and save.\n\ngit push origin <topic branch> --force-with-lease'
+    }
+  ],
+  debug: [
+    {
+      value: 'bisect',
+      label: 'binary search',
+      usage: 'git bisect start\ngit bisect bad                 # Current version is bad\ngit bisect good v2.13          # v6.12 is known to be good',
+      nb: 'Once you have specified at least one bad and one good commit, git bisect selects a commit in the middle of that range of history, checks it out, and outputs something similar to the following:\nBisecting: 675 revisions left to test after this (roughly 10 steps)\nYou should now compile the checked-out version and test it. If that version works correctly, type\n\ngit bisect good\n\nIf that version is broken, type\n\ngit bisect bad\n\nThen git bisect will respond with something like\n\nBisecting: 337 revisions left to test after this (roughly 9 steps)\n\nKeep repeating the process: compile the tree, test it, and depending on whether it is good or bad run git bisect good or git bisect bad to ask for the next commit that needs testing.\nEventually there will be no more revisions left to inspect, and the command will print out a description of the first bad commit. The reference refs/bisect/bad will be left pointing at that commit.\nAfter a bisect session, to clean up the bisection state and return to the original HEAD, issue the following command:\n\ngit bisect reset'
+    },
+    {
+      value: 'blame',
+      label: 'who modified each lines',
+      usage: 'git blame -L <number-line-start>,<number-line-end> <filename>',
+      'nb': 'The -L option will restrict the output to the requested line range\n',
+    },
+    {
+      value: 'grep',
+      label: 'search in files',
+      usage: 'git grep -n <your_text_or_expression>',
+      'nb': 'Print lines matching a pattern.\nOption -n to display the numbering of lines in which there are matches',
     }
   ]
 };

@@ -644,7 +644,6 @@ body {
   .footer .logo--github {
     width: 4rem;
     height: 4rem;
-    cursor: pointer;
     fill: blue; }
 
 .footer__link {
