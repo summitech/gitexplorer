@@ -45,7 +45,12 @@ export const secondaryOptions = {
       value: 'specific-commit',
       label: 'to last commit',
       usage: 'git reset --hard'
-    }
+    },
+    {
+      value: 'specific-commit-from-remote',
+      label: 'to last commit on remote branch',
+      usage: 'git reset --hard <repo>/<branch>'
+    },
   ],
   initialize: [
     {
@@ -212,6 +217,16 @@ export const secondaryOptions = {
       label: 'alias',
       usage: 'git config --global alias.<alias> <command>',
       nb: 'e.g. git config --global alias.st status. Typing git st in the terminal now does the same thing as git status'
+    },
+    {
+      value: 'add-annotated-tag',
+      label: 'annotated tag',
+      usage: 'git tag -a v1.4 -m "my version 1.4"\n\ngit push',
+    },
+    {
+      value: 'add-annotated-tag-for-old-commit',
+      label: 'annotated tag for old commit',
+      usage: "git tag -a v1.2 -m 'version 1.2' <commit-hash>\n\ngit push",
     }
   ],
   push: [
