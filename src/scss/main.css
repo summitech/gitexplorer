@@ -617,46 +617,46 @@ body {
         .nav .language__select__menu-list {
           padding: 0 !important; }
 
-.footer__copyright {
-  display: block;
-  color: #4a4a4a;
-  font-size: 1.4rem;
-  letter-spacing: 1px;
-  margin: 0;
-  transition: 0.1s color;
-  text-align: center; }
-  .footer__copyright span {
-    color: crimson; }
-  .footer__copyright:hover {
-    color: initial; }
-  .footer__copyright a {
-    color: inherit; }
-    .footer__copyright a:hover {
-      text-decoration: underline; }
-
-.footer .logo {
-  display: flex;
-  justify-content: flex-end; }
-  @media (max-width: 768px) {
-    .footer .logo {
-      justify-content: center;
-      margin-bottom: 1rem; } }
-  .footer .logo--github {
-    width: 4rem;
-    height: 4rem;
-    fill: blue; }
-
-.footer__link {
-  margin-left: 2rem;
-  position: relative; }
-  .footer__link::before {
-    content: '';
-    display: inline-block;
-    width: 3px;
-    height: 3px;
-    border-radius: 100%;
-    background-color: white;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -1.2rem; }
+.footer {
+  margin-top: 2rem; }
+  .footer__copyright {
+    display: block;
+    color: #4a4a4a;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    margin: 0;
+    transition: 0.1s color;
+    text-align: center;
+    line-height: 4rem; }
+    .footer__copyright span {
+      color: crimson; }
+    .footer__copyright:hover {
+      color: initial; }
+    .footer__copyright a {
+      color: inherit; }
+      .footer__copyright a:hover {
+        text-decoration: underline; }
+  .footer .logo {
+    float: right; }
+    @media (max-width: 768px) {
+      .footer .logo {
+        justify-content: center;
+        margin-bottom: 1rem; } }
+    .footer .logo--github {
+      width: 4rem;
+      height: 4rem;
+      fill: blue; }
+  .footer__link {
+    margin-left: 2rem;
+    position: relative; }
+    .footer__link::before {
+      content: '';
+      display: inline-block;
+      width: 3px;
+      height: 3px;
+      border-radius: 100%;
+      background-color: white;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -1.2rem; }
