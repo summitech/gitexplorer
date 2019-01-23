@@ -1,8 +1,11 @@
 .footer {
+  margin-top: 2rem;
+
   &__copyright {
     display: block;
     @include text();
     text-align: center;
+    line-height: 4rem;
 
     span {
       color: crimson;
@@ -22,8 +25,7 @@
   }
 
   .logo {
-    display: flex;
-    justify-content: flex-end;
+    float: right;
 
     @include respond('as') {
       justify-content: center;
