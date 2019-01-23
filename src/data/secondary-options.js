@@ -287,5 +287,13 @@ export const secondaryOptions = {
       usage: 'git grep -n <your_text_or_expression>',
       'nb': 'Print lines matching a pattern.\nOption -n to display the numbering of lines in which there are matches',
     }
+  ],
+  synchronize: [
+    {
+      value: 'branch-from-fork',
+      label: 'a branch in a fork',
+      usage: 'git fetch upstream \n\ngit checkout <branch-name> \n\ngit merge upstream/<branch-name>',
+      nb: 'You need to configure a remote (upstream) for your fork first. Check how to configure it here.'
+    },
   ]
 };

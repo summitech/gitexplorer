@@ -13,7 +13,8 @@ const options = [
   { value: 'rename', label: 'rename' },
   { value: 'merge', label: 'merge' },
   { value: 'squash', label: 'squash' },
-  { value: 'debug', label: 'debug' }
+  { value: 'debug', label: 'debug' },
+  { value: 'synchronize', label: 'synchronize' }
 ];
 
 export const primaryOptions = options.sort((x, y) => {
