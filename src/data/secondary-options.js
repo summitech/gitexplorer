@@ -37,12 +37,6 @@ export const secondaryOptions = {
       label: 'add the GPG key',
       usage: 'git config --global user.signingkey <your-secret-gpg-key>',
       nb: 'Git is cryptographically secure, but it’s not foolproof. If you’re taking work from others on the internet and want to verify that commits are actually from a trusted source, Git has a few ways to sign and verify work using GPG.'
-    },
-    {
-      value: 'remote-for-work',
-      label: 'a remote for a fork',
-      usage: 'git remote add upstream <original-repo>.git \n\ngit remote -v                 # To verify if it worked',
-      nb: 'For example: git remote add upstream https://github.com/summitech/gitexplorer.git'
     }
   ],
 
