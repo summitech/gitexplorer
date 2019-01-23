@@ -286,8 +286,8 @@ export const secondaryOptions = {
     {
       value: 'branch-from-fork',
       label: 'a branch in a fork',
-      usage: 'git fetch upstream \n\ngit checkout <branch-name> \n\ngit merge upstream/<branch-name>',
-      nb: 'You need to configure a remote (upstream) for your fork first. Check how to configure it here.'
+      usage: 'git fetch <remote-repo> \n\ngit checkout <branch-name> \n\ngit merge <remote-repo>/<branch-name>',
+      nb: 'You need to add a remote repo for your fork first.'
     },
   ]
 };
