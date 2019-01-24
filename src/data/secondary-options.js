@@ -6,7 +6,7 @@ export const secondaryOptions = {
       usage: 'git commit -a'
     },
     {
-      value: 'local-changes',
+      value: 'stages-changes',
       label: 'commit all stages changes',
       usage: 'git commit -m <message>',
       nb: 'Replace <message> with your commit message.'
