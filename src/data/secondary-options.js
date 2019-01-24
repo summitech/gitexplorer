@@ -43,11 +43,17 @@ export const secondaryOptions = {
   revert: [
     {
       value: 'specific-commit',
+      label: 'a specific commit',
+      usage: 'git revert <commit-hash>',
+      nb: 'Use git log to see the hash of each commit'
+    },
+    {
+      value: 'to-last-commit',
       label: 'to last commit',
       usage: 'git reset --hard'
     },
     {
-      value: 'specific-commit-from-remote',
+      value: 'to-last-commit-from-remote',
       label: 'to last commit on remote branch',
       usage: 'git reset --hard <repo>/<branch>'
     },
