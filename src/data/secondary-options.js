@@ -232,12 +232,12 @@ export const secondaryOptions = {
     {
       value: 'add-annotated-tag',
       label: 'annotated tag',
-      usage: 'git tag -a v1.4 -m "my version 1.4"\n\ngit push',
+      usage: 'git tag -a v1.4 -m "my version 1.4"\n\ngit push --tags',
     },
     {
       value: 'add-annotated-tag-for-old-commit',
       label: 'annotated tag for old commit',
-      usage: "git tag -a v1.2 -m 'version 1.2' <commit-hash>\n\ngit push",
+      usage: "git tag -a v1.2 -m 'version 1.2' <commit-hash>\n\ngit push --tags",
     }
   ],
   push: [
