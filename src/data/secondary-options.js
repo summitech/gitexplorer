@@ -122,6 +122,11 @@ export const secondaryOptions = {
       usage: 'git branch -D <branch name>'
     },
     {
+      value: 'tag',
+      label: 'a tag',
+      usage: 'git tag -d v<tag version>'
+    },
+    {
       value: 'remote',
       label: 'remote',
       usage: 'git remote rm <remote>'
