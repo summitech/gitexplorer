@@ -267,7 +267,7 @@ export const secondaryOptions = {
     {
       value: "single-file",
       label: "merge a single file from one branch to another.",
-      usage: "git checkout <branch name> <path to file>"
+      usage: "git checkout <branch name> <path to file> --patch"
     }
   ],
   squash: [
