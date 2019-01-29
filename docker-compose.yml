@@ -1,0 +1,21 @@
+version: "3.2"
+services:
+  gitexplorer:
+    restart: always
+    build:
+      context: ./
+      cache_from:
+        - node:alpine
+    container_name: gitexplorer 
+    hostname: gitexplorer 
+    network_mode: bridge
+    volumes:
+      - ./:/usr/app
+    ports:
+      - 3000:3000
+    environment:
+      - SHELL=/bin/bash
+      - NODE_ENV=development
+      - PORT=3000
+    command:
+      sh -c 'npm i && npm run start'
