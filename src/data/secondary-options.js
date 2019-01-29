@@ -58,6 +58,7 @@ export const secondaryOptions = {
       usage: 'git reset --hard <repo>/<branch>'
     },
   ],
+
   initialize: [
     {
       value: 'new-repo',
@@ -66,6 +67,7 @@ export const secondaryOptions = {
       usage: 'git init'
     }
   ],
+
   modify: [
     {
       value: 'commit-message',
@@ -84,6 +86,7 @@ export const secondaryOptions = {
       nb: '<alias> is your remote name e.g origin'
     }
   ],
+  
   show: [
     {
       value: 'repo-status',
@@ -121,6 +124,7 @@ export const secondaryOptions = {
       nb: 'The active branch is prefixed with *'
     }
   ],
+  
   delete: [
     {
       value: 'branch',
@@ -155,6 +159,7 @@ export const secondaryOptions = {
       nb: 'Use this option to unstage and remove paths only from the index. Working tree files, whether modified or not, will be left alone.'
     }
   ],
+  
   compareCommits: [
     {
       value: 'terminal',
@@ -169,6 +174,7 @@ export const secondaryOptions = {
       nb: 'sha1 and sha2 are the sha of the commits you want to compare. \n\ndiff.txt is the file you want to store the contents of the diff',
     }
   ],
+  
   correct: [
     {
       value: 'commit-wrong-branch',
@@ -177,6 +183,7 @@ export const secondaryOptions = {
       usage: 'pour water in kettle'
     }
   ],
+  
   clone: [
     {
       value: 'clone-repo-into-a-new-dir',
@@ -191,6 +198,7 @@ export const secondaryOptions = {
       nb: 'The repo is cloned into the current directory\n\nThe current directory is represented with a "." (period)'
     },
   ],
+  
   ignore: [
     {
       value: 'ignore-files-in-a-dir',
@@ -199,6 +207,7 @@ export const secondaryOptions = {
       nb: 'This must be added to .gitignore file\n\nReplace "dir name" with name of directory whose files you want git to ignore'
     }
   ],
+  
   help: [
     {
       value: 'command-help',
@@ -207,6 +216,7 @@ export const secondaryOptions = {
       nb: 'e.g. git merge --help\n\nType q to quite terminal'
     }
   ],
+  
   add: [
     {
       value: 'new-changes',
@@ -240,6 +250,7 @@ export const secondaryOptions = {
       usage: "git tag -a v1.2 -m 'version 1.2' <commit-hash>\n\ngit push --tags",
     }
   ],
+  
   push: [
     {
       value: 'new-remote-branch',
@@ -247,6 +258,7 @@ export const secondaryOptions = {
       usage: 'git push -u origin <branchname>'
     }
   ],
+  
   rename: [
     {
       value: 'branch',
@@ -258,6 +270,7 @@ export const secondaryOptions = {
       usage: 'git remote rename <oldname> <newname>'
     }
   ],
+  
   merge: [
     {
       value: 'branch',
@@ -265,6 +278,7 @@ export const secondaryOptions = {
       usage: 'git merge <branch-name>'
     }
   ],
+  
   squash: [
     {
       value: 'pr',
@@ -273,6 +287,7 @@ export const secondaryOptions = {
       nb: 'Make sure that latest commits are fetched from upstream.\n\nFor example (assuming you have a remote named upstream):\n\ngit fetch upstream\ngit rebase -i upstream/master\n\nChange "pick" to "squash" for the commits you wish to squash and save.\n\ngit push origin <topic branch> --force-with-lease'
     }
   ],
+  
   debug: [
     {
       value: 'bisect',
@@ -291,6 +306,21 @@ export const secondaryOptions = {
       label: 'search in files',
       usage: 'git grep -n <your_text_or_expression>',
       'nb': 'Print lines matching a pattern.\nOption -n to display the numbering of lines in which there are matches',
+    }
+  ],
+  
+  recovery: [
+    {
+      value: 'dropped-commit',
+      label: 'show hashes dangling commits after hard reset to previous commit',
+      usage: 'git reflog',
+      nb: 'alternative: git log -g. For recovery use\ngit checkout -b <recovery> <hash>'
+    },
+    {
+      value: 'deleted-branch',
+      label: 'show hashes removed branch or other git objects',
+      usage: 'git fsck --full',
+      nb: 'show hashes all dangling git objects. For recovery use\ngit checkout -b <recovery> <hash>'
     }
   ],
   synchronize: [
