@@ -39,6 +39,11 @@ npm run install (Install all dependencies)
 npm run start
 ```
 
+To try GitExplorer in a docker container, run this:
+```
+docker-compose up
+```
+
 ### Makers
 Awesome devs and designer at [Summitech](https://summitech.ng)
 
