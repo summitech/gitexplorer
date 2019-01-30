@@ -14,6 +14,7 @@ const options = [
   { value: 'merge', label: 'merge' },
   { value: 'squash', label: 'squash' },
   { value: 'debug', label: 'debug' },
+  { value: 'recovery', label: 'recovery' },
   { value: 'synchronize', label: 'synchronize' }
 ];
 
