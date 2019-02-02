@@ -34,7 +34,9 @@ You can reach us on [the official git explorer twitter handle](https://twitter.c
 
 ### Installation
 ```
-npm run install (Install all dependencies)
+npm install (Install all dependencies)
+
+npm run build
 
 npm run start
 ```
