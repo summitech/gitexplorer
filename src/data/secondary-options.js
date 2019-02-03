@@ -197,6 +197,17 @@ export const secondaryOptions = {
       usage: 'git clone <repo-url> .',
       nb: 'The repo is cloned into the current directory\n\nThe current directory is represented with a "." (period)'
     },
+    {
+      value: 'clone-repo-with-submodule-into-a-current-dir',
+      label: 'existing repo along with submodules into the current directory',
+      usage: 'git clone --recurse-submodules <repo-url> .',
+      nb: 'If git version is under 2.13, use --recursive option instead.'
+    },
+    {
+      value: 'clone-submodule-after',
+      label: 'submodules after cloning existing repo',
+      usage: 'git submodule update --init --recursive'
+    }
   ],
   
   ignore: [
