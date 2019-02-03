@@ -287,6 +287,11 @@ export const secondaryOptions = {
       value: 'branch',
       label: 'another branch to current branch',
       usage: 'git merge <branch-name>'
+    },
+    {
+      value: "single-file",
+      label: "merge a single file from one branch to another.",
+      usage: "git checkout <branch name> <path to file> --patch"
     }
   ],
   
