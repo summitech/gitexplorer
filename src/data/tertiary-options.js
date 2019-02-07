@@ -41,6 +41,11 @@ export const tertiaryOptions = {
       value: 'checkout',
       label: 'and switch to the new branch',
       usage: 'git checkout -b <new name>'
+    },
+    {
+      value: 'checkout-remote',
+      label: 'from another branch',
+      usage: 'git checkout -b <new name> <another branch>'
     }
   ],
 };
