@@ -325,7 +325,7 @@ export const secondaryOptions = {
     }
   ],
   
-  recovery: [
+  recover: [
     {
       value: 'dropped-commit',
       label: 'show hashes dangling commits after hard reset to previous commit',
