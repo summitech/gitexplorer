@@ -157,6 +157,12 @@ export const secondaryOptions = {
       label: 'files from index',
       usage: 'git rm --cached <file or dir>',
       nb: 'Use this option to unstage and remove paths only from the index. Working tree files, whether modified or not, will be left alone.'
+    },
+    {
+      value: 'local-branches-not-on-remote',
+      label: "local branches that don't exist at remote",
+      usage: 'git remove prune <remote-name>',
+      nb: 'Use the --dry-run option to report what branches will be pruned, but do not actually prune them'
     }
   ],
   
