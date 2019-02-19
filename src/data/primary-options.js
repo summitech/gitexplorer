@@ -19,5 +19,5 @@ const options = [
 ];
 
 export const primaryOptions = options.sort((x, y) => {
-  return x.value - y.value;
+   return x.value > y.value ? 1 : x.value===y.value ? 0 : -1;
 });
