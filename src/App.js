@@ -24,7 +24,8 @@ class App extends Component {
     };
   }
 
-  toggleMode = () => {
+  toggleMode = (...args) => {
+    console.log(args);
     this.setState(
       prevState => ({ dark: !prevState.dark }),
       () => {

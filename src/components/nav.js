@@ -24,7 +24,7 @@ const Nav = ({
 );
 
 Nav.propTypes = {
-  fastType: PropTypes.string,
+  fastType: PropTypes.bool,
   mode: PropTypes.bool,
   toggleFastType: PropTypes.func,
   toggleMode: PropTypes.func
