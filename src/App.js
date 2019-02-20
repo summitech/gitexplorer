@@ -12,6 +12,7 @@ class App extends Component {
     super(props);
     this.state = {
       dark: JSON.parse(localStorage.getItem('dark')) || false,
+      fastType: JSON.parse(localStorage.getItem('fastType')) || false,
       firstOption: null,
       showSecond: false,
       secondOption: null,
@@ -28,6 +29,15 @@ class App extends Component {
       prevState => ({ dark: !prevState.dark }),
       () => {
         localStorage.setItem('dark', this.state.dark);
+      }
+    );
+  };
+
+  toggleFastType = () => {
+    this.setState(
+      prevState => ({ fastType: !prevState.fastType }),
+      () => {
+        localStorage.setItem('fastType', this.state.fastType);
       }
     );
   };
@@ -116,14 +126,22 @@ class App extends Component {
       thirdOption,
       showSecond,
       showThird,
+      fastType,
       nb,
       usage,
       copied
     } = this.state;
+    const avgTypingDelay = fastType ? 0 : 50;
+
     return (
       <div className={`home ${classnames({ dark: this.state.dark })}`}>
         <div className="container home__container">
-          <Nav mode={this.state.dark} toggleMode={this.toggleMode} />
+          <Nav
+            mode={this.state.dark}
+            toggleMode={this.toggleMode}
+            toggleFastType={this.toggleFastType}
+            fastType={fastType}
+          />
           <div className="content">
             <div className="row">
               <div className="col-5">
@@ -180,7 +198,7 @@ class App extends Component {
                   <div className="board board--1">
                     <pre>
                       {usage.length ? (
-                        <Typist avgTypingDelay={50} cursor={{ show: false }}>
+                        <Typist avgTypingDelay={avgTypingDelay} cursor={{ show: false }}>
                           {usage}
                         </Typist>
                       ) : (
@@ -207,7 +225,7 @@ class App extends Component {
                       <h2 className="board__title  dark-white">Note</h2>
                       <div className="board board--2">
                         <pre>
-                          <Typist avgTypingDelay={50} cursor={{ show: false }}>
+                          <Typist avgTypingDelay={avgTypingDelay} cursor={{ show: false }}>
                             {nb}
                           </Typist>
                         </pre>

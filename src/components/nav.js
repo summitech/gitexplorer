@@ -13,6 +13,22 @@ class Nav extends React.Component {
     return (
       <nav className="nav">
         <div className="toggle">
+          <p className="toggle__option toggle__option--left  dark-white">Normal type speed</p>
+          <div className="toggler">
+            <label htmlFor="fastType">
+              <input
+                type="checkbox"
+                id="fastType"
+                checked={this.props.fastType}
+                onChange={this.props.toggleFastType}
+              />
+              <span className="switch" />
+              <span className="button"> </span>
+            </label>
+          </div>
+          <p className="toggle__option toggle__option--right  dark-white">Fast type speed</p>
+        </div>
+        <div className="toggle">
           <p className="toggle__option toggle__option--left  dark-white">Light Mode</p>
           <div className="toggler">
             <label htmlFor="color">
@@ -34,8 +50,10 @@ class Nav extends React.Component {
 }
 
 Nav.propTypes = {
+  fastType: PropTypes.string,
   mode: PropTypes.bool,
-  toggleMode: PropTypes.func
+  toggleFastType: PropTypes.func,
+  toggleMode: PropTypes.func,
 };
 
 export { Nav };

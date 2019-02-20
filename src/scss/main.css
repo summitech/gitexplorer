@@ -399,6 +399,9 @@ body {
       letter-spacing: 1px; }
       .home .content__title span {
         color: #00bfaa; }
+    @media (max-width: 575px) {
+      .home .content {
+        padding-top: 5rem; } }
     .home .content__subtitle {
       color: #4a4a4a;
       font-size: 1.4rem;
@@ -533,6 +536,9 @@ body {
       margin-right: 1rem; }
     .toggle__option--right {
       margin-left: 1rem; }
+  @media (max-width: 575px) {
+    .toggle {
+      margin-bottom: 2rem; } }
 
 .toggler {
   display: inline-block;
@@ -577,7 +583,7 @@ body {
 .nav {
   align-items: center;
   display: flex;
-  justify-content: flex-end; }
+  justify-content: space-between; }
   @media (max-width: 575px) {
     .nav {
       align-items: center;

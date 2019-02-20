@@ -1,7 +1,7 @@
 .nav {
   align-items: center;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 
   @include respond('xs') {
     align-items: center;
