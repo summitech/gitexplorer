@@ -121,6 +121,7 @@ class App extends Component {
 
   render() {
     const {
+      dark,
       firstOption,
       secondOption,
       thirdOption,
@@ -134,10 +135,10 @@ class App extends Component {
     const avgTypingDelay = fastType ? 0 : 50;
 
     return (
-      <div className={`home ${classnames({ dark: this.state.dark })}`}>
+      <div className={classnames('home', { dark })}>
         <div className="container home__container">
           <Nav
-            mode={this.state.dark}
+            mode={dark}
             toggleMode={this.toggleMode}
             toggleFastType={this.toggleFastType}
             fastType={fastType}
@@ -236,7 +237,7 @@ class App extends Component {
               </div>
             </div>
           </div>
-          <Footer dark={this.state.dark} />
+          <Footer dark={dark} />
         </div>
       </div>
     );
