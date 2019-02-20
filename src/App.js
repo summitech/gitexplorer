@@ -24,21 +24,13 @@ class App extends Component {
     };
   }
 
-  toggleMode = (...args) => {
-    console.log(args);
-    this.setState(
-      prevState => ({ dark: !prevState.dark }),
-      () => {
-        localStorage.setItem('dark', this.state.dark);
-      }
-    );
-  };
+  handleToggle = (evt) => {
+    const { id } = evt.target;
 
-  toggleFastType = () => {
     this.setState(
-      prevState => ({ fastType: !prevState.fastType }),
+      prevState => ({ [id]: !prevState[id] }),
       () => {
-        localStorage.setItem('fastType', this.state.fastType);
+        localStorage.setItem(id, this.state[id]);
       }
     );
   };
@@ -140,12 +132,7 @@ class App extends Component {
     return (
       <div className={classnames('home', { dark })}>
         <div className="container home__container">
-          <Nav
-            mode={dark}
-            toggleMode={this.toggleMode}
-            toggleFastType={this.toggleFastType}
-            fastType={fastType}
-          />
+          <Nav mode={dark} onToggle={this.handleToggle} fastType={fastType} />
           <div className="content">
             <div className="row">
               <div className="col-5">

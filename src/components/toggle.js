@@ -20,7 +20,7 @@ const Toggle = ({
 Toggle.propTypes = {
   checked: PropTypes.bool,
   leftLabel: PropTypes.string,
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   onChange: PropTypes.func,
   rightLabel: PropTypes.string
 };
