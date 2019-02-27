@@ -12,6 +12,7 @@ class App extends Component {
     super(props);
     this.state = {
       dark: JSON.parse(localStorage.getItem('dark')) || false,
+      fastType: JSON.parse(localStorage.getItem('fastType')) || false,
       firstOption: null,
       showSecond: false,
       secondOption: null,
@@ -23,11 +24,13 @@ class App extends Component {
     };
   }
 
-  toggleMode = () => {
+  handleToggle = (evt) => {
+    const { id } = evt.target;
+
     this.setState(
-      prevState => ({ dark: !prevState.dark }),
+      prevState => ({ [id]: !prevState[id] }),
       () => {
-        localStorage.setItem('dark', this.state.dark);
+        localStorage.setItem(id, this.state[id]);
       }
     );
   };
@@ -97,7 +100,9 @@ class App extends Component {
     el.style.position = 'absolute';
     el.style.left = '-9999px';
     document.body.appendChild(el);
-    const selected = document.getSelection().rangeCount > 0 ? document.getSelection().getRangeAt(0) : false;
+    const selected = document.getSelection().rangeCount > 0
+      ? document.getSelection().getRangeAt(0)
+      : false;
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
@@ -111,19 +116,23 @@ class App extends Component {
 
   render() {
     const {
+      dark,
       firstOption,
       secondOption,
       thirdOption,
       showSecond,
       showThird,
+      fastType,
       nb,
       usage,
       copied
     } = this.state;
+    const avgTypingDelay = fastType ? 0 : 50;
+
     return (
-      <div className={`home ${classnames({ dark: this.state.dark })}`}>
+      <div className={classnames('home', { dark })}>
         <div className="container home__container">
-          <Nav mode={this.state.dark} toggleMode={this.toggleMode} />
+          <Nav mode={dark} onToggle={this.handleToggle} fastType={fastType} />
           <div className="content">
             <div className="row">
               <div className="col-5">
@@ -180,7 +189,7 @@ class App extends Component {
                   <div className="board board--1">
                     <pre>
                       {usage.length ? (
-                        <Typist avgTypingDelay={50} cursor={{ show: false }}>
+                        <Typist avgTypingDelay={avgTypingDelay} cursor={{ show: false }}>
                           {usage}
                         </Typist>
                       ) : (
@@ -207,7 +216,7 @@ class App extends Component {
                       <h2 className="board__title  dark-white">Note</h2>
                       <div className="board board--2">
                         <pre>
-                          <Typist avgTypingDelay={50} cursor={{ show: false }}>
+                          <Typist avgTypingDelay={avgTypingDelay} cursor={{ show: false }}>
                             {nb}
                           </Typist>
                         </pre>
@@ -218,7 +227,7 @@ class App extends Component {
               </div>
             </div>
           </div>
-          <Footer dark={this.state.dark} />
+          <Footer dark={dark} />
         </div>
       </div>
     );

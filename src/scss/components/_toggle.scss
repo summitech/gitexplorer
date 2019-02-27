@@ -15,6 +15,9 @@ $height: 10px;
       margin-left: 1rem;
     }
   }
+  @include respond('xs') {
+    margin-bottom: 2rem;
+  }
 }
 
 .toggler {

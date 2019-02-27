@@ -86,7 +86,7 @@ export const secondaryOptions = {
       nb: '<alias> is your remote name e.g origin'
     }
   ],
-  
+
   show: [
     {
       value: 'repo-status',
@@ -124,7 +124,7 @@ export const secondaryOptions = {
       nb: 'The active branch is prefixed with *'
     }
   ],
-  
+
   delete: [
     {
       value: 'branch',
@@ -165,7 +165,7 @@ export const secondaryOptions = {
       nb: 'Use the --dry-run option to report what branches will be pruned, but do not actually prune them'
     }
   ],
-  
+
   compareCommits: [
     {
       value: 'terminal',
@@ -180,7 +180,7 @@ export const secondaryOptions = {
       nb: 'sha1 and sha2 are the sha of the commits you want to compare. \n\ndiff.txt is the file you want to store the contents of the diff',
     }
   ],
-  
+
   correct: [
     {
       value: 'commit-wrong-branch',
@@ -189,7 +189,7 @@ export const secondaryOptions = {
       usage: 'pour water in kettle'
     }
   ],
-  
+
   clone: [
     {
       value: 'clone-repo-into-a-new-dir',
@@ -215,7 +215,7 @@ export const secondaryOptions = {
       usage: 'git submodule update --init --recursive'
     }
   ],
-  
+
   ignore: [
     {
       value: 'ignore-files-in-a-dir',
@@ -224,7 +224,7 @@ export const secondaryOptions = {
       nb: 'This must be added to .gitignore file\n\nReplace "dir name" with name of directory whose files you want git to ignore'
     }
   ],
-  
+
   help: [
     {
       value: 'command-help',
@@ -233,7 +233,7 @@ export const secondaryOptions = {
       nb: 'e.g. git merge --help\n\nType q to quite terminal'
     }
   ],
-  
+
   add: [
     {
       value: 'new-changes',
@@ -267,7 +267,7 @@ export const secondaryOptions = {
       usage: "git tag -a v1.2 -m 'version 1.2' <commit-hash>\n\ngit push --tags",
     }
   ],
-  
+
   push: [
     {
       value: 'new-remote-branch',
@@ -275,7 +275,7 @@ export const secondaryOptions = {
       usage: 'git push -u origin <branchname>'
     }
   ],
-  
+
   rename: [
     {
       value: 'branch',
@@ -287,7 +287,7 @@ export const secondaryOptions = {
       usage: 'git remote rename <oldname> <newname>'
     }
   ],
-  
+
   merge: [
     {
       value: 'branch',
@@ -295,12 +295,12 @@ export const secondaryOptions = {
       usage: 'git merge <branch-name>'
     },
     {
-      value: "single-file",
-      label: "merge a single file from one branch to another.",
-      usage: "git checkout <branch name> <path to file> --patch"
+      value: 'single-file',
+      label: 'merge a single file from one branch to another.',
+      usage: 'git checkout <branch name> <path to file> --patch'
     }
   ],
-  
+
   squash: [
     {
       value: 'pr',
@@ -309,7 +309,7 @@ export const secondaryOptions = {
       nb: 'Make sure that latest commits are fetched from upstream.\n\nFor example (assuming you have a remote named upstream):\n\ngit fetch upstream\ngit rebase -i upstream/master\n\nChange "pick" to "squash" for the commits you wish to squash and save.\n\ngit push origin <topic branch> --force-with-lease'
     }
   ],
-  
+
   debug: [
     {
       value: 'bisect',
@@ -321,16 +321,16 @@ export const secondaryOptions = {
       value: 'blame',
       label: 'who modified each lines',
       usage: 'git blame -L <number-line-start>,<number-line-end> <filename>',
-      'nb': 'The -L option will restrict the output to the requested line range\n',
+      nb: 'The -L option will restrict the output to the requested line range\n',
     },
     {
       value: 'grep',
       label: 'search in files',
       usage: 'git grep -n <your_text_or_expression>',
-      'nb': 'Print lines matching a pattern.\nOption -n to display the numbering of lines in which there are matches',
+      nb: 'Print lines matching a pattern.\nOption -n to display the numbering of lines in which there are matches',
     }
   ],
-  
+
   recover: [
     {
       value: 'dropped-commit',
@@ -345,6 +345,7 @@ export const secondaryOptions = {
       nb: 'show hashes all dangling git objects. For recovery use\ngit checkout -b <recovery> <hash>'
     }
   ],
+
   synchronize: [
     {
       value: 'branch-from-fork',
