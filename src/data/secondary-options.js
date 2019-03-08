@@ -161,7 +161,7 @@ export const secondaryOptions = {
     {
       value: 'local-branches-not-on-remote',
       label: "local branches that don't exist at remote",
-      usage: 'git remove prune <remote-name>',
+      usage: 'git remote prune <remote-name>',
       nb: 'Use the --dry-run option to report what branches will be pruned, but do not actually prune them'
     }
   ],
