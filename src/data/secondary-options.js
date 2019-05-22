@@ -122,6 +122,11 @@ export const secondaryOptions = {
       label: 'branches',
       usage: 'git branch',
       nb: 'The active branch is prefixed with *'
+    },
+    {
+      value: 'tags',
+      label: 'tags',
+      usage: 'git tag'
     }
   ],
 
