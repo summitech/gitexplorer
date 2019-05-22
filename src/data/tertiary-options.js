@@ -17,6 +17,16 @@ export const tertiaryOptions = {
       label: 'since a particular period',
       usage: 'git log --since=period',
       nb: 'Replace period with intended timeframe e.g git log --since=3days. You can use dates like 2018-12-31.\n\n Similar flags are --until, --before, --after'
+    },
+    {
+      value: 'commit-on-oneline',
+      label: 'with each commit on one line',
+      usage: 'git log --oneline'
+    },
+    {
+      value: 'patches-introduced',
+      label: 'with the patches introduced in each commit',
+      usage : 'git log -p'
     }
   ],
   branch: [
