@@ -288,6 +288,11 @@ export const secondaryOptions = {
       label: 'branch',
     },
     {
+      value: 'file',
+      label: 'file',
+      usage: 'git mv file_from file_to'
+    },
+    {
       value: 'remoteUrl',
       label: 'remote',
       usage: 'git remote rename <oldname> <newname>'
