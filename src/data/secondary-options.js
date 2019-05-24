@@ -122,6 +122,11 @@ export const secondaryOptions = {
       label: 'branches',
       usage: 'git branch',
       nb: 'The active branch is prefixed with *'
+    },
+    {
+      value: 'tags',
+      label: 'tags',
+      usage: 'git tag'
     }
   ],
 
@@ -222,6 +227,12 @@ export const secondaryOptions = {
       label: 'all files in a directory',
       usage: '<dir name>/*',
       nb: 'This must be added to .gitignore file\n\nReplace "dir name" with name of directory whose files you want git to ignore'
+    },
+    {
+      value: 'ignore-all-files-of-a-specific-type',
+      label: 'all files of a specific type',
+      usage: '*.<filename extension>',
+      nb: 'This must be added to .gitignore file\n\nReplace "filename extension" with the extension of the files you want git to ignore\n\nFor example *.py tells git to ignore all python files in the repository'
     }
   ],
 
@@ -280,6 +291,11 @@ export const secondaryOptions = {
     {
       value: 'branch',
       label: 'branch',
+    },
+    {
+      value: 'file',
+      label: 'file',
+      usage: 'git mv file_from file_to'
     },
     {
       value: 'remoteUrl',
