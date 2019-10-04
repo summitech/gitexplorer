@@ -168,6 +168,12 @@ export const secondaryOptions = {
       label: "local branches that don't exist at remote",
       usage: 'git remote prune <remote-name>',
       nb: 'Use the --dry-run option to report what branches will be pruned, but do not actually prune them'
+    },
+    {
+      value: 'files-from-old-commit',
+      label: "files from old commits",
+      usage: 'git filter-branch --index-filter \n\'git rm --cached --ignore-unmatch path/to/mylarge_file\' \n--tag-name-filter cat -- --all\n\nfilter-branch keeps backups too, so the size of the repo won\'t decrease immediately unless you expire the reflogs and garbage collect:\n\nrm -Rf .git/refs/original       # careful\ngit gc --aggressive --prune=now # danger',
+      nb: 'Like the rebasing option described before, filter-branch is rewriting operation. If you have published history, you\'ll have to --force push the new refs.'
     }
   ],
 
