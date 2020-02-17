@@ -67,12 +67,14 @@ export const tertiaryOptions = {
     {
       value: 'specific',
       label: 'a specific stash',
-      usage: 'git stash apply <stash id>\n\nThe stash id can be gotten when you run git stash list. It\'s usually in this format: stash@{index} e.g. stash@{0} '
+      usage: 'git stash apply <stash id>',
+      nb: 'The stash id can be gotten when you run git stash list. It\'s usually in this format: stash@{index} e.g. stash@{0}'
     },
     {
       value: 'pop',
       label: 'and delete stash',
-      usage: 'git stash pop or git stash pop <stash id> depending on if you want to pop the latest stash or a specific stash.'
+      usage: 'git stash pop <stash id>',
+      nb: 'Stash id optional. Add it if you want to apply and delete a specific stash otherwise leave to pop the latest stash'
     }
   ],
   'delete-stash': [
@@ -82,7 +84,7 @@ export const tertiaryOptions = {
       usage: 'git stash clear'
     },
     {
-      value: 'all',
+      value: 'specific',
       label: 'specific stash',
       usage: 'git stash drop <stash id>'
     },
@@ -96,7 +98,8 @@ export const tertiaryOptions = {
     {
       value: 'pattern',
       label: 'by pattern',
-      usage: 'git branch | grep <regex pattern> | xargs git branch -D\n\ne.g. git branch | grep "-" | xargs git branch -D will delete all branches that have \'-\' in their names.\n\nNB: Always put your regex pattern in quotes'
+      usage: 'git branch | grep <regex pattern> | xargs git branch -D',
+      nb: 'e.g. git branch | grep "-" | xargs git branch -D will delete all branches that have \'-\' in their names or git branch | grep -v "master\\|staging" | xargs git branch -D will delete all branches except staging and master.\n\nNB: Always put your regex pattern in quotes'
     }
   ]
 };

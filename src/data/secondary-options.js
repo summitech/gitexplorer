@@ -154,11 +154,6 @@ export const secondaryOptions = {
       usage: 'git remote rm <remote>'
     },
     {
-      value: 'stash',
-      label: 'stash',
-      usage: 'git stash clear'
-    },
-    {
       value: 'untracked-files',
       label: 'untracked files',
       usage: 'git clean -<flag>',
@@ -436,7 +431,8 @@ export const secondaryOptions = {
     {
       value: 'save-stash',
       label: '(un)tracked files',
-      usage: 'git stash or git stash save <message> in order to stash with a customized message\n\n To stash untracked files git stash save -u'
+      usage: 'git stash',
+      nb: 'To stash with a customized message use git stash save <message>\n\nTo stash untracked files git stash save -u'
     },
     {
       value: 'list-stash',
@@ -450,7 +446,8 @@ export const secondaryOptions = {
     {
       value: 'show',
       label: 'view the contents of a stash',
-      usage: 'git stash show -p <stash id>\n\nYou can leave out the stash id if you want the contents of the latest stash'
+      usage: 'git stash show -p <stash id>',
+      nb: 'You can leave out the stash id if you want the contents of the latest stash'
     },
     {
       value: 'delete-stash',
