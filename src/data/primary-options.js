@@ -13,6 +13,7 @@ const options = [
   { value: 'rename', label: 'rename' },
   { value: 'merge', label: 'merge' },
   { value: 'squash', label: 'squash' },
+  { value: 'stash', label: 'stash' },
   { value: 'debug', label: 'debug' },
   { value: 'recover', label: 'recover' },
   { value: 'synchronize', label: 'synchronize' },
