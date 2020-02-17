@@ -86,5 +86,17 @@ export const tertiaryOptions = {
       label: 'specific stash',
       usage: 'git stash drop <stash id>'
     },
+  ],
+  'delete-multiple-branches': [
+    {
+      value: 'name',
+      label: 'by name',
+      usage: 'git branch -D <branch name> <branch name> <branch name>'
+    },
+    {
+      value: 'pattern',
+      label: 'by pattern',
+      usage: 'git branch | grep <regex pattern> | xargs git branch -D\n\ne.g. git branch | grep "-" | xargs git branch -D will delete all branches that have \'-\' in their names.\n\nNB: Always put your regex pattern in quotes'
+    }
   ]
 };

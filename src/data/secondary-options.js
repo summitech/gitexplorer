@@ -140,6 +140,10 @@ export const secondaryOptions = {
       usage: 'git branch -D <branch name>'
     },
     {
+      value: 'delete-multiple-branches',
+      label: 'multiple branches',
+    },
+    {
       value: 'tag',
       label: 'a tag',
       usage: 'git tag -d v<tag version>'
