@@ -389,9 +389,9 @@ export const secondaryOptions = {
 
   rebase: [
     {
-      value: 'orign-branch',
+      value: 'origin-branch',
       label: 'an origin branch into my working branch',
-      usage: 'git pull --rebase orgin <branch name>',
+      usage: 'git pull --rebase origin <branch name>',
       nb:
         'Rebase an origin branch into working branch. Replace <branch name> with the branch you are pulling'
     },
