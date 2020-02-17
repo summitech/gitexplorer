@@ -58,4 +58,33 @@ export const tertiaryOptions = {
       usage: 'git checkout -b <new name> <another branch>'
     }
   ],
+  'apply-stash': [
+    {
+      value: 'latest',
+      label: 'latest stash',
+      usage: 'git stash apply'
+    },
+    {
+      value: 'specific',
+      label: 'a specific stash',
+      usage: 'git stash apply <stash id>\n\nThe stash id can be gotten when you run git stash list. It\'s usually in this format: stash@{index} e.g. stash@{0} '
+    },
+    {
+      value: 'pop',
+      label: 'and delete stash',
+      usage: 'git stash pop or git stash pop <stash id> depending on if you want to pop the latest stash or a specific stash.'
+    }
+  ],
+  'delete-stash': [
+    {
+      value: 'all',
+      label: 'all stashed changes',
+      usage: 'git stash clear'
+    },
+    {
+      value: 'all',
+      label: 'specific stash',
+      usage: 'git stash drop <stash id>'
+    },
+  ]
 };
