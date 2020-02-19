@@ -45,6 +45,9 @@ class App extends Component {
         nb: '',
         usage: ''
       });
+    } else if (optionsSecond[selectedOption.value].length === 1) {
+      this.setState({ firstOption: selectedOption, showSecond: true });
+      this.onSecondChange(optionsSecond[selectedOption.value][0]);
     } else {
       this.setState({ firstOption: selectedOption, showSecond: true });
     }
@@ -61,6 +64,15 @@ class App extends Component {
           thirdOption: null
         });
       });
+    } else if (optionsThird[selectedOption.value].length === 1) {
+      this.setState({
+        secondOption: selectedOption,
+        showThird: true,
+        thirdOption: null,
+        nb: '',
+        usage: ''
+      });
+      this.onThirdChange(optionsThird[selectedOption.value][0]);
     } else {
       this.setState({
         secondOption: selectedOption,
