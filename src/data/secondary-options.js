@@ -29,6 +29,12 @@ export const secondaryOptions = {
       nb: 'Change default editor to vim.'
     },
     {
+      value: 'diff-tool',
+      label: 'external diff tool',
+      usage: 'git config --global diff.external "meld"',
+      nb: 'Set external diff tool to meld.'
+    }, 
+    {
       value: 'merge-tool',
       label: 'default merge tool',
       usage: 'git config --global merge.tool "meld"',
