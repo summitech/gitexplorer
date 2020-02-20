@@ -352,7 +352,7 @@ export const secondaryOptions = {
       value: 'commits',
       label: 'last n number of commit into one',
       usage:
-        'git reset --soft HEAD~N\ngit commit add .\ngit commit -m <message>',
+        'git reset --soft HEAD~N\ngit add .\ngit commit -m <message>',
       nb:
         "Replace N with the number of commits you want to squash and <message> with your commit message. You can use the command 'git log' to view your commit history"
     }
