@@ -29,6 +29,12 @@ export const secondaryOptions = {
       nb: 'Change default editor to vim.'
     },
     {
+      value: 'merge-tool',
+      label: 'default merge tool',
+      usage: 'git config --global merge.tool "meld"',
+      nb: 'Set default merge tool to meld.'
+    }, 
+    {
       value: 'color',
       label: 'color',
       usage: 'git config --global color.ui auto',
