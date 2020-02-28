@@ -470,5 +470,15 @@ export const secondaryOptions = {
       label: 'create a new branch and apply stash',
       usage: 'git stash branch <branch name> <stash id>'
     }
-  ]
+  ],
+
+  cherrypick: [
+    {
+      value: 'origin-branch',
+      label: 'an commit from origin branch into my working branch',
+      usage: 'git cherry-pick <commit-hash> <commit-hash>',
+      nb:
+        'Applying one or more commit from one branch into your working branch. '
+    },
+  ],
 };
