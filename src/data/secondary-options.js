@@ -63,6 +63,11 @@ export const secondaryOptions = {
       nb: 'Use git log to see the hash of each commit'
     },
     {
+      value: 'specific-file',
+      label: 'a specific file',
+      usage: 'git checkout <repo>/<branch> <filename>',
+    },
+    {
       value: 'to-last-commit',
       label: 'to last commit',
       usage: 'git reset --hard'

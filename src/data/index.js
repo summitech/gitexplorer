@@ -1,9 +1,3 @@
-import { primaryOptions } from './primary-options';
-import { secondaryOptions } from './secondary-options';
-import { tertiaryOptions } from './tertiary-options';
-
-export const optionsFirst = primaryOptions;
-
-export const optionsSecond = secondaryOptions;
-
-export const optionsThird = tertiaryOptions;
+export { primaryOptions as optionsFirst } from './primary-options';
+export { secondaryOptions as optionsSecond } from './secondary-options';
+export { tertiaryOptions as optionsThird } from './tertiary-options';
