@@ -205,7 +205,7 @@ export const secondaryOptions = {
     {
       value: 'terminal',
       label: 'and output result in the terminal',
-      usage: 'git diff <sha1> <sha2> | less',
+      usage: 'git diff <sha1> <sha2>',
       nb: 'sha1 and sha2 are the sha hash of the commits you want to compare.'
     },
     {
