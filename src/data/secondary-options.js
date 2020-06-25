@@ -410,7 +410,7 @@ export const secondaryOptions = {
     {
       value: 'local-branch',
       label: 'a local branch into my working branch',
-      usage: 'git pull --rebase <branch name>',
+      usage: 'git rebase <branch name>',
       nb:
         'Rebase another local branch into working branch. Replace <branch name> with the branch you are pulling'
     },
