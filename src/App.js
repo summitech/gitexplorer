@@ -14,9 +14,7 @@ class App extends Component {
       dark: JSON.parse(localStorage.getItem('dark')) || false,
       fastType: JSON.parse(localStorage.getItem('fastType')) || false,
       firstOption: null,
-      showSecond: false,
       secondOption: null,
-      showThird: false,
       thirdOption: null,
       nb: '',
       usage: '',
@@ -39,14 +37,12 @@ class App extends Component {
     if (this.state.secondOption) {
       this.setState({
         firstOption: selectedOption,
-        showSecond: true,
         secondOption: null,
-        showThird: false,
         nb: '',
         usage: ''
       });
     } else {
-      this.setState({ firstOption: selectedOption, showSecond: true });
+      this.setState({ firstOption: selectedOption });
     }
   };
 
@@ -55,7 +51,6 @@ class App extends Component {
       this.setState({ nb: '', usage: '' }, () => {
         this.setState({
           secondOption: selectedOption,
-          showThird: false,
           nb: selectedOption.nb,
           usage: selectedOption.usage,
           thirdOption: null
@@ -64,7 +59,6 @@ class App extends Component {
     } else {
       this.setState({
         secondOption: selectedOption,
-        showThird: true,
         thirdOption: null,
         nb: '',
         usage: ''
@@ -120,8 +114,6 @@ class App extends Component {
       firstOption,
       secondOption,
       thirdOption,
-      showSecond,
-      showThird,
       fastType,
       nb,
       usage,
@@ -156,7 +148,7 @@ class App extends Component {
                     options={optionsFirst}
                   />
 
-                  {showSecond ? (
+                  {firstOption && (
                     <Select
                       placeholder="..."
                       className="options-select"
@@ -166,9 +158,9 @@ class App extends Component {
                       value={secondOption}
                       options={optionsSecond[firstOption.value]}
                     />
-                  ) : null}
+                  )}
 
-                  {showThird ? (
+                  {((secondOption && !usage) || thirdOption) && (
                     <Select
                       placeholder="..."
                       className="options-select"
@@ -178,7 +170,7 @@ class App extends Component {
                       value={thirdOption}
                       options={optionsThird[secondOption.value]}
                     />
-                  ) : null}
+                  )}
                 </div>
               </div>
               <div className="col-7 boards">
