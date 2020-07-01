@@ -160,7 +160,7 @@ class App extends Component {
                     />
                   )}
 
-                  {((secondOption && !usage) || thirdOption) && (
+                  {(secondOption && !secondOption.usage) && (
                     <Select
                       placeholder="..."
                       className="options-select"
