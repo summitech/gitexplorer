@@ -29,6 +29,18 @@ export const secondaryOptions = {
       nb: 'Change default editor to vim.'
     },
     {
+      value: 'diff-tool',
+      label: 'external diff tool',
+      usage: 'git config --global diff.external "meld"',
+      nb: 'Set external diff tool to meld.'
+    }, 
+    {
+      value: 'merge-tool',
+      label: 'default merge tool',
+      usage: 'git config --global merge.tool "meld"',
+      nb: 'Set default merge tool to meld.'
+    }, 
+    {
       value: 'color',
       label: 'color',
       usage: 'git config --global color.ui auto',
@@ -49,6 +61,11 @@ export const secondaryOptions = {
       label: 'a specific commit',
       usage: 'git revert <commit-hash>',
       nb: 'Use git log to see the hash of each commit'
+    },
+    {
+      value: 'specific-file',
+      label: 'a specific file',
+      usage: 'git checkout <repo>/<branch> <filename>',
     },
     {
       value: 'to-last-commit',
@@ -188,7 +205,7 @@ export const secondaryOptions = {
     {
       value: 'terminal',
       label: 'and output result in the terminal',
-      usage: 'git diff <sha1> <sha2> | less',
+      usage: 'git diff <sha1> <sha2>',
       nb: 'sha1 and sha2 are the sha hash of the commits you want to compare.'
     },
     {
@@ -340,7 +357,7 @@ export const secondaryOptions = {
       value: 'commits',
       label: 'last n number of commit into one',
       usage:
-        'git reset --soft HEAD~N\ngit commit add .\ngit commit -m <message>',
+        'git reset --soft HEAD~N\ngit add .\ngit commit -m <message>',
       nb:
         "Replace N with the number of commits you want to squash and <message> with your commit message. You can use the command 'git log' to view your commit history"
     }
@@ -398,7 +415,7 @@ export const secondaryOptions = {
     {
       value: 'local-branch',
       label: 'a local branch into my working branch',
-      usage: 'git pull --rebase <branch name>',
+      usage: 'git rebase <branch name>',
       nb:
         'Rebase another local branch into working branch. Replace <branch name> with the branch you are pulling'
     },
@@ -458,5 +475,15 @@ export const secondaryOptions = {
       label: 'create a new branch and apply stash',
       usage: 'git stash branch <branch name> <stash id>'
     }
-  ]
+  ],
+
+  cherrypick: [
+    {
+      value: 'origin-branch',
+      label: 'an commit from origin branch into my working branch',
+      usage: 'git cherry-pick <commit-hash> <commit-hash>',
+      nb:
+        'Applying one or more commit from one branch into your working branch. '
+    },
+  ],
 };

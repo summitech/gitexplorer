@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Footer, Nav } from 'components';
 import Typist from 'react-typist';
 import { isMobile } from 'react-device-detect';
-import { optionsFirst, optionsSecond, optionsThird } from 'data/index';
+import { optionsFirst, optionsSecond, optionsThird } from 'data';
 import Select from 'react-select';
 import clipboard from 'assets/images/clipboard.svg';
 import classnames from 'classnames';
@@ -41,6 +41,9 @@ class App extends Component {
         nb: '',
         usage: ''
       });
+    } else if (optionsSecond[selectedOption.value].length === 1) {
+      this.setState({ firstOption: selectedOption, showSecond: true });
+      this.onSecondChange(optionsSecond[selectedOption.value][0]);
     } else {
       this.setState({ firstOption: selectedOption });
     }
@@ -56,6 +59,15 @@ class App extends Component {
           thirdOption: null
         });
       });
+    } else if (optionsThird[selectedOption.value].length === 1) {
+      this.setState({
+        secondOption: selectedOption,
+        showThird: true,
+        thirdOption: null,
+        nb: '',
+        usage: ''
+      });
+      this.onThirdChange(optionsThird[selectedOption.value][0]);
     } else {
       this.setState({
         secondOption: selectedOption,

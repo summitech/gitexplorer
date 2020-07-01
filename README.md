@@ -34,11 +34,9 @@ You can reach us on [the official git explorer twitter handle](https://twitter.c
 
 ### Installation
 ```
-npm install (Install all dependencies)
+yarn (Install all dependencies)
 
-npm run build
-
-npm run start
+yarn start
 ```
 
 To try GitExplorer in a docker container, run this:
