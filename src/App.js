@@ -42,7 +42,7 @@ class App extends Component {
         usage: ''
       });
     } else if (optionsSecond[selectedOption.value].length === 1) {
-      this.setState({ firstOption: selectedOption, showSecond: true });
+      this.setState({ firstOption: selectedOption });
       this.onSecondChange(optionsSecond[selectedOption.value][0]);
     } else {
       this.setState({ firstOption: selectedOption });
@@ -62,7 +62,6 @@ class App extends Component {
     } else if (optionsThird[selectedOption.value].length === 1) {
       this.setState({
         secondOption: selectedOption,
-        showThird: true,
         thirdOption: null,
         nb: '',
         usage: ''
