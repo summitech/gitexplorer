@@ -19,6 +19,8 @@ const options = [
   { value: 'synchronize', label: 'synchronize' },
   { value: 'rebase', label: 'rebase' },
   { value: 'cherrypick', label: 'cherry-pick' },
+  { value: 'checkout', label: 'checkout' },
+  { value: 'push', label: 'push' }
 ];
 
 export const primaryOptions = options.sort((x, y) => {

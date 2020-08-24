@@ -33,13 +33,13 @@ export const secondaryOptions = {
       label: 'external diff tool',
       usage: 'git config --global diff.external "meld"',
       nb: 'Set external diff tool to meld.'
-    }, 
+    },
     {
       value: 'merge-tool',
       label: 'default merge tool',
       usage: 'git config --global merge.tool "meld"',
       nb: 'Set default merge tool to meld.'
-    }, 
+    },
     {
       value: 'color',
       label: 'color',
@@ -65,7 +65,7 @@ export const secondaryOptions = {
     {
       value: 'specific-file',
       label: 'a specific file',
-      usage: 'git checkout <repo>/<branch> <filename>',
+      usage: 'git checkout <repo>/<branch> <filename>'
     },
     {
       value: 'to-last-commit',
@@ -158,7 +158,7 @@ export const secondaryOptions = {
     },
     {
       value: 'delete-multiple-branches',
-      label: 'multiple branches',
+      label: 'multiple branches'
     },
     {
       value: 'tag',
@@ -311,7 +311,16 @@ export const secondaryOptions = {
     {
       value: 'new-remote-branch',
       label: 'non-existent remote branch',
-      usage: 'git push -u origin <branchname>'
+      usage: 'git push -u origin <branch-name>',
+      nb:
+        'Here we assume origin is the alias for  your remote url, replace <branch-name> with your branch name'
+    },
+    {
+      value: 'an existing branch',
+      label: 'exising remote branch',
+      usage: 'git push',
+      nb:
+        'Ensure you have checked out to this branch that you want to push to before using this command'
     }
   ],
 
@@ -356,8 +365,7 @@ export const secondaryOptions = {
     {
       value: 'commits',
       label: 'last n number of commit into one',
-      usage:
-        'git reset --soft HEAD~N\ngit add .\ngit commit -m <message>',
+      usage: 'git reset --soft HEAD~N\ngit add .\ngit commit -m <message>',
       nb:
         "Replace N with the number of commits you want to squash and <message> with your commit message. You can use the command 'git log' to view your commit history"
     }
@@ -449,7 +457,8 @@ export const secondaryOptions = {
       value: 'save-stash',
       label: '(un)tracked files',
       usage: 'git stash',
-      nb: 'To stash with a customized message use git stash save <message>\n\nTo stash untracked files git stash save -u'
+      nb:
+        'To stash with a customized message use git stash save <message>\n\nTo stash untracked files git stash save -u'
     },
     {
       value: 'list-stash',
@@ -464,7 +473,8 @@ export const secondaryOptions = {
       value: 'show',
       label: 'view the contents of a stash',
       usage: 'git stash show -p <stash id>',
-      nb: 'You can leave out the stash id if you want the contents of the latest stash'
+      nb:
+        'You can leave out the stash id if you want the contents of the latest stash'
     },
     {
       value: 'delete-stash',
@@ -484,6 +494,23 @@ export const secondaryOptions = {
       usage: 'git cherry-pick <commit-hash> <commit-hash>',
       nb:
         'Applying one or more commit from one branch into your working branch. '
-    },
+    }
   ],
+
+  checkout: [
+    {
+      value: 'new-branch',
+      label: 'to a new branch',
+      usage: 'git checkout -b <branch-name>',
+      nb:
+        'Moves all the files and changes in the current branch into a new branch. Replace <branch-name> with the name you want.'
+    },
+    {
+      value: 'exisiting-branch',
+      label: 'to an exisiting branch',
+      usage: 'git checkout <branch-name>',
+      nb:
+        'Exits the current branch and enters the branch specified in <branch-name>'
+    }
+  ]
 };
