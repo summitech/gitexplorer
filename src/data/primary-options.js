@@ -18,6 +18,7 @@ const options = [
   { value: 'recover', label: 'recover' },
   { value: 'synchronize', label: 'synchronize' },
   { value: 'rebase', label: 'rebase' },
+  { value: 'help', label: 'help' },
   { value: 'cherrypick', label: 'cherry-pick' },
 ];
 
