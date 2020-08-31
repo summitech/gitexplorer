@@ -33,13 +33,13 @@ export const secondaryOptions = {
       label: 'external diff tool',
       usage: 'git config --global diff.external "meld"',
       nb: 'Set external diff tool to meld.'
-    }, 
+    },
     {
       value: 'merge-tool',
       label: 'default merge tool',
       usage: 'git config --global merge.tool "meld"',
       nb: 'Set default merge tool to meld.'
-    }, 
+    },
     {
       value: 'color',
       label: 'color',
@@ -476,6 +476,163 @@ export const secondaryOptions = {
       usage: 'git stash branch <branch name> <stash id>'
     }
   ],
+  help: [
+  {
+    value: 'add',
+    label: 'add',
+    usage:
+      'git help -w add',
+    nb: 'Gives help related to add command'
+  },
+  {
+    value: 'blame',
+    label: 'blame',
+    usage:
+      'git help -w blame',
+    nb: 'Gives help related to blame command'
+  },
+  {
+    value: 'bisect',
+    label: 'bisect',
+    usage:
+      'git help -w bisect',
+    nb: 'Gives help related to bisect command'
+  },
+  {
+    value: 'branch',
+    label: 'branch',
+    usage:
+      'git help -w branch',
+    nb: 'Gives help related to branch command'
+  },
+  {
+    value: 'check-out',
+    label: 'check-out',
+    usage:
+      'git help -w checkout',
+    nb: 'Gives help related to checkout command'
+  },
+  {
+    value: 'cherry-pick',
+    label: 'cherry-pick',
+    usage:
+      'git help -w cherry-pick',
+    nb: 'Gives help related to cherry-pick command'
+  },
+  {
+    value: 'clone',
+    label: 'clone',
+    usage:
+      'git help -w clone',
+    nb: 'Gives help related to clone command'
+  },
+  {
+    value: 'commit',
+    label: 'commit',
+    usage:
+      'git help -w commit',
+    nb: 'Gives help related to commit command'
+  },
+  {
+    value: 'configure',
+    label: 'configure',
+    usage:
+      'git help -w config',
+    nb: 'Gives help related to config command'
+  },
+  {
+    value: 'delete/remove',
+    label: 'delete/remove',
+    usage:
+      'git help -w rm',
+    nb: 'Gives help related to rm command'
+  },
+  {
+    value: 'fetch',
+    label: 'fetch',
+    usage:
+      'git help -w fetch',
+    nb: 'Gives help related to fetch command'
+  },
+  {
+    value: 'fsck',
+    label: 'fsck',
+    usage:'git help -w fsck',
+    nb: 'Gives help related fsck command \nshow hashes all dangling git objects.\nFor recovery use git checkout -b <recovery> <hash>'
+  },
+  {
+    value: 'log',
+    label: 'log',
+    usage:
+      'git help -w log',
+    nb: 'Gives help related to log command'
+  },
+  {
+    value: 'initialize',
+    label: 'initialize',
+    usage:
+      'git help -w init',
+    nb: 'Gives help related to init command'
+  },
+  {
+    value: 'merge',
+    label: 'merge',
+    usage:
+      'git help -w merge',
+    nb: 'Gives help related to merge command'
+  },
+  {
+    value: 'push',
+    label: 'push',
+    usage:
+      'git help -w push',
+    nb: 'Gives help related to push command'
+  },
+  {
+    value: 'rebase',
+    label: 'rebase',
+    usage:
+      'git help -w rebase',
+    nb: 'Gives help related to rebase command'
+  },
+  {
+    value: 'reflog',
+    label: 'reflog',
+    usage:
+      'git help -w reflog',
+    nb: 'Gives help related to reflog command \n\nalternative: git log -g. For recovery use \ngit checkout -b <recovery> <hash>'
+  },
+  {
+    value: 'remote',
+    label: 'remote',
+    usage:
+      'git help -w remote',
+    nb: 'Gives help related to remote command'
+  },
+  {
+    value: 'revert',
+    label: 'revert',
+    usage:
+      'git help -w revert',
+    nb: 'Gives help related to revert command'
+  },
+  {
+    value: 'stash',
+    label: 'stashed',
+    usage:
+      'git help -w stash',
+    nb: 'Gives help related to stash command'
+  },
+  {
+    value: 'status',
+    label: 'status',
+    usage:
+      'git help -w status',
+    nb: 'Gives help related to status command'
+  }
+
+
+],
 
   cherrypick: [
     {
