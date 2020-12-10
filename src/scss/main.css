@@ -398,7 +398,7 @@ body {
       color: #20252d;
       letter-spacing: 1px; }
       .home .content__title span {
-        color: #00bfaa; }
+        color: #8363c7; }
     @media (max-width: 575px) {
       .home .content {
         padding-top: 5rem; } }
@@ -420,7 +420,7 @@ body {
         letter-spacing: 1px;
         margin: 0;
         transition: 0.1s color;
-        color: #00bfaa;
+        color: #8363c7;
         font-weight: bold;
         margin-bottom: 2rem; }
       .home .content .options-select {
@@ -458,7 +458,7 @@ body {
     .home .content .board {
       background: #20252d;
       border-radius: 1rem;
-      border-left: 1rem solid #00bfaa;
+      border-left: 1rem solid #8363c7;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -555,13 +555,13 @@ body {
       left: 25px;
       transition: 0.5s; }
     .toggler input[type='checkbox']:checked ~ .switch {
-      background: #00baa5;
+      background: #805fc6;
       transition: 0.5s; }
   .toggler .switch {
     display: block;
     width: 45px;
     height: 10px;
-    background: #00bfaa;
+    background: #8363c7;
     border-radius: 5px;
     position: absolute;
     top: 0;
