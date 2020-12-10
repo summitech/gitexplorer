@@ -1,28 +1,26 @@
-# GitExplorer
+# KonvoyExplorer
 Table of Contents
 
-[Intro](https://github.com/summitech/gitexplorer/blob/master/README.md#intro)
+[Intro](https://github.com/natmegs/gitexplorer/blob/master/README.md#intro)
 
-[Tech Stack](https://github.com/summitech/gitexplorer/blob/master/README.md#tech-stack)
+[Tech Stack](https://github.com/natmegs/gitexplorer/blob/master/README.md#tech-stack)
 
-[Installation](https://github.com/summitech/gitexplorer/blob/master/README.md#installation)
+[Installation](https://github.com/natmegs/gitexplorer/blob/master/README.md#installation)
 
-[Makers](https://github.com/summitech/gitexplorer/blob/master/README.md#makers)
+[Makers](https://github.com/natmegs/gitexplorer/blob/master/README.md#makers)
 
-[Contribute](https://github.com/summitech/gitexplorer/blob/master/README.md#contribute)
+[Contribute](https://github.com/natmegs/gitexplorer/blob/master/README.md#contribute)
 
-[Donate](https://github.com/summitech/gitexplorer/blob/master/README.md#donate)
+[Donate](https://github.com/natmegs/gitexplorer/blob/master/README.md#donate)
 
-[RoadMap](https://github.com/summitech/gitexplorer/blob/master/README.md#roadmap)
+[RoadMap](https://github.com/natmegs/gitexplorer/blob/master/README.md#roadmap)
 
 ### Intro
-Last year, we came across [Sarah Drasner's array explorer](https://github.com/sdras/array-explorer). It is a really cool resource for anyone to easily figure out the best JS array method to use. We loved it and decided to build something similar for Git.
-
-Website: [Click to find the right git commands without digging through the web.](https://gitexplorer.com)
+At Corona Hackathon, we came across git explorer: [Click to find the right git commands without digging through the web.](https://gitexplorer.com). This was based on [Sarah Drasner's array explorer](https://github.com/sdras/array-explorer). It is a really cool resource for anyone to easily figure out the best JS array method to use. We loved it and decided to build something similar for Konvoy.
 
 Explore and Enjoy! 
 
-You can reach us on [the official git explorer twitter handle](https://twitter.com/gitexplorer) or on [Summitech's twitter handle](https://twitter.com/summitechng).
+You can reach the gitexplorer crew on [the official git explorer twitter handle](https://twitter.com/gitexplorer) or on [Summitech's twitter handle](https://twitter.com/summitechng).
 
 
 ### Tech Stack
@@ -39,15 +37,16 @@ yarn (Install all dependencies)
 yarn start
 ```
 
-To try GitExplorer in a docker container, run this:
+To try KonvoyExplorer in a docker container, run this:
+
 ```
 docker-compose up
 ```
 
-### Makers
+### Makers of GitExplorer
 Awesome devs and designer at [Summitech](https://summitech.ng)
 
-### Contribute
+### Contribute to GitExplorer
 Thank you for contributing to GitExplorer!
 
 Please follow the below instructions to send a Pull Request (Search the website to make sure that this command doesn't already exist).
@@ -61,12 +60,16 @@ These three files are responsible for the options a user can pick.
 `tertiary-option.js` file is responsible for cases where there needs to be a third & final select box.
 
 ###### Steps to add a new command
+
 0. Please ensure you are not on the master branch. Checkout to a new branch entirely.
 1. Add an object to the array in the `primary-options.js` file. Sample Format:
+
 ```
  { value: 'show', label: 'show/view' }
 ```
+
 2. Add an array to the `secondary-options` file. Sample Format:
+
 ```
 show: [
     {
@@ -79,7 +82,8 @@ show: [
       value: 'logs',
       label: 'commit logs/history'
     },
-  ```
+```
+  
   The `nb` is optional. It is responsible for what the user sees in the notes section. 
   
   `\n` is used to insert newline.
@@ -87,14 +91,15 @@ show: [
   3. To add tertiary options, remove the `usage` and `nb` key/value pair for that command in the `secondary-options.js` file e.g..
   
    ```
-show: [
-    {
-      value: 'logs',
-      label: 'commit logs/history'
-    },
+   show: [
+       {
+         value: 'logs',
+         label: 'commit logs/history'
+       },
   ```
   
   then supply `tertiary-options.js` file the necessary data e.g.
+
   ```
   logs: [
     {
@@ -117,15 +122,11 @@ show: [
     }
   ]
   ```
+
 4. Once you are done, add, commit, push and create a PR to Master.
 
-### Donate
+### Donate to GitExplorer
 
  You can also contribute to the continued success of the project via donation. Please click this [link](https://rave.flutterwave.com/donate/bavfmdlomzs2).
 
- ### RoadMap
-
- - [x] Enforce HTTPs & offline capabilities
- - [x] Open source
- - [ ] PWA
- - [ ] Shareable commands
+### RoadMap
