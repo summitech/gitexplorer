@@ -6,4 +6,19 @@ export const secondaryOptions = {
       usage: 'konvoy up -y'
     },
   ],
+  init: [
+    {
+      value: 'yes',
+      label: 'without further prompts',
+      usage: 'konvoy init',
+    }
+  ],
+
+  destroy: [
+    {
+      value: 'yes',
+      label: 'without further prompts',
+      usage: 'konvoy destroy -y',
+    }
+  ],
 };

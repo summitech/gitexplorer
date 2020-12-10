@@ -1,4 +1,6 @@
 const options = [
+  { value: 'destroy', label: 'destroy cluster resources' },
+  { value: 'init', label: 'create the provision and deploy configuration with default values' },
   { value: 'up', label: 'provision a cluster' },
 ];
 
