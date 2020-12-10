@@ -42,9 +42,24 @@ export const secondaryOptions = {
 
   check: [
     {
-      value: 'yes',
-      label: 'without further prompts',
-      usage: 'konvoy check',
+      value: 'addons',
+      label: 'Run checks on the addons',
+      usage: 'konvoy check addons',
+    },
+    {
+      value: 'kubernetes',
+      label: 'Run checks on the cluster components',
+      usage: 'konvoy check kubernetes',
+    },
+    {
+      value: 'nodes',
+      label: 'Run checks on the nodes',
+      usage: 'konvoy check nodes',
+    },
+    {
+      value: 'preflight',
+      label: 'Run checks to validate machines are ready for installation',
+      usage: 'konvoy check preflight',
     }
   ],
 
@@ -179,6 +194,14 @@ export const secondaryOptions = {
       value: 'yes',
       label: 'without further prompts',
       usage: 'konvoy view',
+    }
+  ],
+  
+  preflight: [
+    {
+      value: 'yes',
+      label: 'without further prompts',
+      usage: 'konvoy check preflight',
     }
   ],
   

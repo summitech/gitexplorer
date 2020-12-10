@@ -1,4 +1,4 @@
-const options = [
+const options = [  
   { value: 'apply', label: 'update certain configurations in the existing kubeconfig file' },
   { value: 'check', label: 'check on the health of the cluster' },
   { value: 'completion', label: 'check the output of the shell completion code for the specified shell (bash or zsh)' },
@@ -23,6 +23,7 @@ const options = [
   { value: 'uncordon', label: 'Marks nodes in the node pool as schedulable' },
   { value: 'up', label: 'provision a cluster' },
   { value: 'view', label: 'view various artifacts' },
+  { value: 'preflight', label: 'validate machines are ready for installation' },
 ];
 
 export const primaryOptions = options.sort((x, y) => {
