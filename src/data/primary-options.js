@@ -1,5 +1,6 @@
 const options = [
   { value: 'up', label: 'provision a cluster' },
+  { value: 'init', label: 'setup and configure my cluster' },
 ];
 
 export const primaryOptions = options.sort((x, y) => {
