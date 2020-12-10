@@ -104,14 +104,6 @@ export const secondaryOptions = {
     }
   ],
 
-  generate: [
-    {
-      value: 'yes',
-      label: 'without further prompts',
-      usage: 'konvoy image',
-    }
-  ],
-
   image: [
     {
       value: 'yes',
