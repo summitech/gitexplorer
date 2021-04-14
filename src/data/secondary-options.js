@@ -39,6 +39,12 @@ export const secondaryOptions = {
       label: 'default merge tool',
       usage: 'git config --global merge.tool "meld"',
       nb: 'Set default merge tool to meld.'
+    },
+    {
+      value: 'default-branch-name',
+      label: 'default branch name',
+      usage: 'git config --global init.defaultBranch <new-name>',
+      nb: 'Set default name for inital branch of new projects. (needs git 2.2.8 or later)'
     }, 
     {
       value: 'color',
