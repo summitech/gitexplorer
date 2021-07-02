@@ -101,5 +101,22 @@ export const tertiaryOptions = {
       usage: 'git branch | grep <regex pattern> | xargs git branch -D',
       nb: 'e.g. git branch | grep "-" | xargs git branch -D will delete all branches that have \'-\' in their names or git branch | grep -v "master\\|staging" | xargs git branch -D will delete all branches except staging and master.\n\nNB: Always put your regex pattern in quotes'
     }
+  ],
+  'discard-changes': [
+    {
+      value: 'local-changes',
+      label: 'local changes in a file',
+      usage: 'git restore <filename>'
+    },
+    {
+      value: 'staged-files',
+      label: 'the files you have added to stage area',
+      usage: 'git restore --staged <filename>'
+    },
+    {
+      value: 'file-from-previous-commit',
+      label: 'a file from previous commit(unstage)',
+      usage: 'git restore --source <commit-id> <filename>'
+    }
   ]
 };
