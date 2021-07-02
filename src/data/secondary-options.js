@@ -486,4 +486,11 @@ export const secondaryOptions = {
         'Applying one or more commit from one branch into your working branch. '
     },
   ],
+
+  restore: [
+    {
+      value: 'discard-changes',
+      label: 'restore',
+    }
+  ],
 };
