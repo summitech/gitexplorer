@@ -483,7 +483,7 @@ export const secondaryOptions = {
       label: 'an commit from origin branch into my working branch',
       usage: 'git cherry-pick <commit-hash> <commit-hash>',
       nb:
-        'Applying one or more commit from one branch into your working branch. '
+        'Applying one or more commits from one branch into your working branch. '
     },
   ],
 };
