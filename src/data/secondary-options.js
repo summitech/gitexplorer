@@ -166,6 +166,11 @@ export const secondaryOptions = {
       usage: 'git tag -d v<tag version>'
     },
     {
+      value: "remote-tag",
+      label: "a remote tag",
+      usage: "git push origin --delete v<tag version>",
+    },
+    {
       value: 'remote',
       label: 'remote',
       usage: 'git remote rm <remote>'
