@@ -7,6 +7,7 @@ const options = [
   { value: 'show', label: 'show/view' },
   { value: 'delete', label: 'delete/remove' },
   { value: 'compareCommits', label: 'compare two commits' },
+  { value: 'compareFileInDiffBranch', label: 'compare file in two branches' },
   { value: 'configure', label: 'configure' },
   { value: 'clone', label: 'clone' },
   { value: 'ignore', label: 'ignore' },

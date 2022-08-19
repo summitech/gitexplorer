@@ -217,6 +217,22 @@ export const secondaryOptions = {
     }
   ],
 
+  compareFileInDiffBranch: [
+    {
+      value: 'terminal',
+      label: 'and output result in the terminal',
+      usage: 'git diff <master> -- fileNameWithPath',
+      nb: 'Your current checked out branch and master are the branches where you want to compare the same file. fileNameWithPath is the file with relative path.'
+    },
+    {
+      value: 'file',
+      label: 'and output result to a file',
+      usage: 'git diff <master> -- filenamewithpath > diff.txt',
+      nb:
+        'Your current checked out branch and master are the branches where you want to compare the same file. fileNameWithPath is the file with relative path. \n\ndiff.txt is the file you want to store the contents of the diff.'
+    }
+  ],
+
   clone: [
     {
       value: 'clone-repo-into-a-new-dir',
